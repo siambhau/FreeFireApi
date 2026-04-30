@@ -4,7 +4,7 @@
 
 <br/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&pause=800&color=FF6B00&center=true&vCenter=true&multiline=true&width=820&height=80&lines=Free+Fire+Centralized+API+System+v1.0;15+Groups+%E2%80%A2+32+Endpoints+%E2%80%A2+Player+Info+is+FREE+%F0%9F%92%8E)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&pause=800&color=FF6B00&center=true&vCenter=true&multiline=true&width=820&height=80&lines=Free+Fire+Centralized+API+System+v1.0;15+Groups+%E2%80%A2+30+Endpoints+%E2%80%A2+Player+Info+is+FREE+%F0%9F%92%8E)](https://git.io/typing-svg)
 
 <br/>
 
@@ -25,7 +25,7 @@
   <img src="https://img.shields.io/badge/Game-Free%20Fire-FF0000?style=for-the-badge&logo=firefoxbrowser&logoColor=white&labelColor=0d1117" />
   <img src="https://img.shields.io/badge/Built%20With-Python%20Flask-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=0d1117" />
   <img src="https://img.shields.io/badge/Endpoint%20Groups-15-8B5CF6?style=for-the-badge&logo=apachespark&logoColor=white&labelColor=0d1117" />
-  <img src="https://img.shields.io/badge/Total%20Endpoints-32-00C851?style=for-the-badge&labelColor=0d1117" />
+  <img src="https://img.shields.io/badge/Total%20Endpoints-30-00C851?style=for-the-badge&labelColor=0d1117" />
 </p>
 
 <br/>
@@ -40,7 +40,7 @@
 
 <blockquote>
 <img src="https://img.shields.io/badge/⚡-PREMIUM-FF6B00?style=flat-square&labelColor=0d1117" /> &nbsp;
-The most complete <b>Centralized REST API for Free Fire</b> — Player Info, JWT Generator, Ban Check, Guild Tools, Friend Actions, Bind/Unbind, Outfit Renderer, Craftlands and more. <b>32 endpoints across 15 groups</b>, all in one place.
+The most complete <b>Centralized REST API for Free Fire</b> — Player Info, JWT Generator, Ban Check, Guild Tools, Friend Actions, Bind/Unbind, Outfit Renderer, Craftlands and more. <b>30 endpoints across 15 groups</b>, all in one place.
 </blockquote>
 
 </div>
@@ -89,7 +89,7 @@ The most complete <b>Centralized REST API for Free Fire</b> — Player Info, JWT
         <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f517/512.gif" width="28" /><br/>
         <b>Bind Tools</b><br/>
         <sub><code>/bind</code></sub><br/>
-        <sub><img src="https://img.shields.io/badge/5-endpoints-2CA5E0?style=flat-square&labelColor=0d1117"/></sub>
+        <sub><img src="https://img.shields.io/badge/4-endpoints-2CA5E0?style=flat-square&labelColor=0d1117"/></sub>
       </a>
     </td>
     <td align="center">
@@ -115,7 +115,7 @@ The most complete <b>Centralized REST API for Free Fire</b> — Player Info, JWT
         <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f464/512.gif" width="28" /><br/>
         <b>Free Fire Info</b> <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f193/512.gif" width="16" align="center"/><br/>
         <sub><code>/freefireinfo</code></sub><br/>
-        <sub><img src="https://img.shields.io/badge/3-endpoints-00C851?style=flat-square&labelColor=0d1117"/></sub>
+        <sub><img src="https://img.shields.io/badge/2-endpoints-00C851?style=flat-square&labelColor=0d1117"/></sub>
       </a>
     </td>
     <td align="center">
@@ -360,17 +360,6 @@ GET /accesstojwt/token?uid=4147917569&password=8415C426BBE3371DADD82F5B&key=YOUR
 | `password` | string | ✅ | Account Password (hex format) |
 | `key` | string | ✅ | Your API Key |
 
-#### ▸ Method 3: Bulk Tokens
-
-```http
-GET /accesstojwt/token?limit=50&key=YOUR_KEY
-```
-
-| Parameter | Type | Required | Default | Description |
-|-----------|------|:--------:|:-------:|-------------|
-| `limit` | integer | ❌ | `500` | Number of tokens to retrieve |
-| `key` | string | ✅ | — | Your API Key |
-
 <details>
 <summary><b>✅ Success / ❌ Error Responses</b></summary>
 <br/>
@@ -395,16 +384,6 @@ GET /accesstojwt/token?limit=50&key=YOUR_KEY
   "token": "eyJ...JWT...",
   "token_access": "eyJ...AccessToken...",
   "uid": "4147917569"
-}
-
-
-// Bulk Tokens Method
-{
-  "tokens": [
-    "eyJ...TOKEN1...",
-    "eyJ...TOKEN2...",
-    "eyJ...TOKEN3..."
-  ]
 }
 
 
@@ -607,7 +586,7 @@ GET /bancheck/bancheck?uid=2579249340&key=YOUR_KEY
 
 ## 4. 🔗 Bind Tools
 
-<img src="https://img.shields.io/badge/Group-/bind-2CA5E0?style=flat-square&labelColor=0d1117" /> &nbsp; <img src="https://img.shields.io/badge/Endpoints-5-8B5CF6?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/Group-/bind-2CA5E0?style=flat-square&labelColor=0d1117" /> &nbsp; <img src="https://img.shields.io/badge/Endpoints-4-8B5CF6?style=flat-square&labelColor=0d1117" />
 
 > Complete email bind toolkit — view bind info, change bound email (5-step OTP flow), unbind email (3-step), or cancel a pending bind request.
 
@@ -672,22 +651,6 @@ GET /bind/bind_info?access_token=YOUR_ACCESS_TOKEN&key=YOUR_KEY
 ```
 
 </details>
-
----
-
-### `GET /bind/health` — Health Check *(No Key Required)*
-
-```http
-GET /bind/health
-```
-
-```json
-{
-  "status": "healthy",
-  "service": "Garena Bind Info API",
-  "Owner": "SiamBhau"
-}
-```
 
 ---
 
@@ -1026,9 +989,9 @@ GET /eattojwt/eat?eat_token=YOUR_EAT_TOKEN&key=YOUR_KEY
 
 ## 7. 👤 Free Fire Info
 
-<img src="https://img.shields.io/badge/Group-/freefireinfo-FF6B00?style=flat-square&labelColor=0d1117" /> &nbsp; <img src="https://img.shields.io/badge/Endpoints-3-8B5CF6?style=flat-square&labelColor=0d1117" /> &nbsp; <img src="https://img.shields.io/badge/%E2%9C%A8%20FREE%20TIER-Available-00C851?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/Group-/freefireinfo-FF6B00?style=flat-square&labelColor=0d1117" /> &nbsp; <img src="https://img.shields.io/badge/Endpoints-2-8B5CF6?style=flat-square&labelColor=0d1117" /> &nbsp; <img src="https://img.shields.io/badge/%E2%9C%A8%20FREE%20TIER-Available-00C851?style=flat-square&labelColor=0d1117" />
 
-> <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f193/512.gif" width="16" align="center"/> &nbsp; **This group is FREE** — request a complimentary key on Telegram. Complete profile info, game stats and JWT refresh utility for Free Fire accounts.
+> <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f193/512.gif" width="16" align="center"/> &nbsp; **This group is FREE** — request a complimentary key on Telegram. Complete profile info and game stats for Free Fire accounts.
 
 ### `GET /freefireinfo/bhau` — Full Player Profile
 
@@ -1201,20 +1164,6 @@ GET /freefireinfo/stats?uid=2579249340&region=BD&gamemode=cs&matchmode=RANKED&ke
 ```
 
 </details>
-
----
-
-### `GET /freefireinfo/refresh` — Refresh All Region Tokens *(No Key Required)*
-
-```http
-GET /freefireinfo/refresh
-```
-
-```json
-{
-  "message": "Tokens refreshed for all regions."
-}
-```
 
 ---
 
@@ -2256,22 +2205,6 @@ GET /craftlands/map_details?map_code=ABC123&region=BD&lang=en&key=YOUR_KEY
 | `504` | ![](https://img.shields.io/badge/504-Timeout-FF6B00?style=flat-square) | Request timeout |
 
 </div>
-
----
-
-## 🏷️ GitHub Topics
-
-> Add these topics to your GitHub repository (Settings → Topics) so people searching for Free Fire APIs can discover this project:
-
-```
-free-fire  free-fire-api  freefire-api  garena  garena-api
-ff-api  free-fire-tools  free-fire-bot  jwt-generator  ban-check
-guild-api  craftland  player-info  outfit-generator  long-bio
-name-changer  imei-lookup  rest-api  flask-api  python-api
-telegram-bot  premium-api  paid-api  centralized-api
-```
-
-> ✨ **SEO Keywords:** Free Fire API, Garena API, Free Fire JWT, Free Fire Ban Check, Free Fire Player Info, Free Fire Bot API, FF API, Free Fire REST API, Free Fire Centralized API, Premium Free Fire API, Free Fire Tools API.
 
 ---
 
