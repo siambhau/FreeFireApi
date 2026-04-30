@@ -4,7 +4,7 @@
 
 <br/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&pause=800&color=FF6B00&center=true&vCenter=true&multiline=true&width=820&height=80&lines=Free+Fire+Centralized+API+System+v1.0;15+Groups+%E2%80%A2+32+Endpoints+%E2%80%A2+Premium+Only+%F0%9F%94%92)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&pause=800&color=FF6B00&center=true&vCenter=true&multiline=true&width=820&height=80&lines=Free+Fire+Centralized+API+System+v1.0;15+Groups+%E2%80%A2+32+Endpoints+%E2%80%A2+Player+Info+is+FREE+%F0%9F%92%8E)](https://git.io/typing-svg)
 
 <br/>
 
@@ -12,10 +12,12 @@
   <a href="http://siambhau69.eu.cc:9677">
     <img src="https://img.shields.io/badge/%F0%9F%9F%A2%20API-Online%20%26%20Running-00C851?style=for-the-badge&labelColor=0d1117" />
   </a>
-  <a href="https://t.me/SiamBhau">
-    <img src="https://img.shields.io/badge/%F0%9F%92%B0%20Get%20API%20Key-Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white&labelColor=0d1117" />
+  <a href="https://t.me/share/url?url=https%3A%2F%2Fsiambhau69.eu.cc%3A9677&text=Hi%20%40SiamBhau%20%F0%9F%91%8B%2C%20I%27d%20like%20to%20get%20a%20FREE%20API%20key%20for%20the%20Free%20Fire%20Info%20endpoints.%20Could%20you%20please%20activate%20one%20for%20me%3F%20%F0%9F%99%8F">
+    <img src="https://img.shields.io/badge/%E2%9C%A8%20Free%20Key-Free%20Fire%20Info-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white&labelColor=0d1117" />
   </a>
-  <img src="https://img.shields.io/badge/%F0%9F%94%92%20Access-Premium%20Only-FF0000?style=for-the-badge&labelColor=0d1117" />
+  <a href="https://t.me/share/url?url=https%3A%2F%2Fsiambhau69.eu.cc%3A9677&text=Hi%20%40SiamBhau%20%F0%9F%91%8B%2C%20I%20want%20to%20BUY%20a%20Premium%20API%20key%20for%20the%20Free%20Fire%20Centralized%20API.%20Please%20share%20your%20available%20plans%2C%20pricing%20%26%20payment%20methods.%20%F0%9F%92%8E">
+    <img src="https://img.shields.io/badge/%F0%9F%92%8E%20Premium%20Key-Buy%20Now-FF6B00?style=for-the-badge&logo=telegram&logoColor=white&labelColor=0d1117" />
+  </a>
 </p>
 
 <p align="center">
@@ -46,103 +48,248 @@ The most complete <b>Centralized REST API for Free Fire</b> — Player Info, JWT
 ---
 
 <!-- ──────────────────────────────────────────────────── -->
-<!-- 🔒 PREMIUM ACCESS NOTICE                              -->
+<!-- 💎 FREE vs PREMIUM ACCESS                             -->
 <!-- ──────────────────────────────────────────────────── -->
 
 <div align="center">
 
-## 🔒 Premium Access Only
+## <img src="https://api.iconify.design/fluent-emoji/locked-with-key.svg" width="30" align="center"/> &nbsp;Access Tiers — Free vs Premium
+
+<br/>
+
+<table>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img src="https://api.iconify.design/fluent-emoji/free-button.svg" width="72" alt="Free Tier" />
+      <h3>Free Tier</h3>
+      <p>
+        <b>Only the <a href="#7--free-fire-info">Free Fire Info</a> group is FREE.</b><br/>
+        <sub>Player profile · in-game stats · token refresh — at zero cost.</sub>
+      </p>
+      <p align="left">
+        &nbsp;&nbsp;&nbsp; <img src="https://api.iconify.design/fluent-emoji/check-mark-button.svg" width="14" align="center"/> &nbsp; <code>/freefireinfo/bhau</code><br/>
+        &nbsp;&nbsp;&nbsp; <img src="https://api.iconify.design/fluent-emoji/check-mark-button.svg" width="14" align="center"/> &nbsp; <code>/freefireinfo/stats</code><br/>
+        &nbsp;&nbsp;&nbsp; <img src="https://api.iconify.design/fluent-emoji/check-mark-button.svg" width="14" align="center"/> &nbsp; <code>/freefireinfo/refresh</code>
+      </p>
+      <br/>
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fsiambhau69.eu.cc%3A9677&text=Hi%20%40SiamBhau%20%F0%9F%91%8B%2C%20I%27d%20like%20to%20get%20a%20FREE%20API%20key%20for%20the%20Free%20Fire%20Info%20endpoints.%20Could%20you%20please%20activate%20one%20for%20me%3F%20%F0%9F%99%8F">
+        <img src="https://img.shields.io/badge/%E2%9C%A8%20%20Get%20FREE%20Key%20%20%E2%9C%A8-Message%20on%20Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white&labelColor=0d1117&color=2CA5E0" alt="Get FREE Key — Message on Telegram" />
+      </a>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img src="https://api.iconify.design/fluent-emoji/crown.svg" width="72" alt="Premium Tier" />
+      <h3>Premium Tier</h3>
+      <p>
+        <b>All other 14 groups · 29 endpoints unlocked.</b><br/>
+        <sub>JWT · Ban Check · Guild · Bind · Outfits · Craftlands · Friends · IMEI · & more.</sub>
+      </p>
+      <p align="left">
+        &nbsp;&nbsp;&nbsp; <img src="https://api.iconify.design/fluent-emoji/sparkles.svg" width="14" align="center"/> &nbsp; Per-endpoint key access<br/>
+        &nbsp;&nbsp;&nbsp; <img src="https://api.iconify.design/fluent-emoji/sparkles.svg" width="14" align="center"/> &nbsp; Custom expiry & limits<br/>
+        &nbsp;&nbsp;&nbsp; <img src="https://api.iconify.design/fluent-emoji/sparkles.svg" width="14" align="center"/> &nbsp; Priority support
+      </p>
+      <br/>
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fsiambhau69.eu.cc%3A9677&text=Hi%20%40SiamBhau%20%F0%9F%91%8B%2C%20I%20want%20to%20BUY%20a%20Premium%20API%20key%20for%20the%20Free%20Fire%20Centralized%20API.%20Please%20share%20your%20available%20plans%2C%20pricing%20%26%20payment%20methods.%20%F0%9F%92%8E">
+        <img src="https://img.shields.io/badge/%F0%9F%92%8E%20%20Buy%20PREMIUM%20Key%20%20%F0%9F%92%8E-Message%20on%20Telegram-FF6B00?style=for-the-badge&logo=telegram&logoColor=white&labelColor=0d1117&color=FF6B00" alt="Buy Premium Key — Message on Telegram" />
+      </a>
+    </td>
+  </tr>
+</table>
 
 </div>
 
 > [!IMPORTANT]
-> **This API is NOT free and NOT open for public use.**
-> Every request is protected by an API Key system with per-endpoint access control, expiry dates, and active/inactive status enforcement. Without a valid key, **all endpoints return `403 Forbidden`**.
-
-<table>
-<tr>
-<td width="50%">
-
-#### ❌ What this API is **NOT**
-
-- ❌ Not free / no free tier
-- ❌ No public sandbox
-- ❌ No trial / demo access
-- ❌ No anonymous requests
-- ❌ Not for resale or sublicensing
-
-</td>
-<td width="50%">
-
-#### ✅ How to get **paid access**
-
-1. Contact on Telegram: **[@SiamBhau](https://t.me/SiamBhau)**
-2. Choose endpoints you need
-3. Pay for your plan
-4. Receive your private API Key
-5. Use the key on every request
-
-</td>
-</tr>
-</table>
-
-<div align="center">
-
-<a href="https://t.me/SiamBhau">
-  <img src="https://img.shields.io/badge/💬%20Contact%20to%20Buy%20a%20Key-Telegram%20%40SiamBhau-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white&labelColor=0d1117" />
-</a>
-
-</div>
+> <img src="https://api.iconify.design/fluent-emoji/locked.svg" width="16" align="center"/> &nbsp; **Not all tools are free.** Only the **Free Fire Info** group is free with a complimentary key. Every other endpoint requires a **paid API key** with per-endpoint access control, expiry dates, and active status enforcement. Without a valid key, premium endpoints return `403 Forbidden`.
+>
+> <img src="https://api.iconify.design/fluent-emoji/light-bulb.svg" width="16" align="center"/> &nbsp; **Tip:** Click either button above — Telegram will open with the right message pre-filled. Just hit send!
 
 ---
 
 <div align="center">
 
-## 🗂️ Table of Contents
+## <img src="https://api.iconify.design/fluent-emoji/bookmark-tabs.svg" width="30" align="center"/> &nbsp;Table of Contents
+
+<sub>Click any card to jump to that section</sub>
+
+<br/>
+
+<table>
+  <tr>
+    <td align="center" width="200">
+      <a href="#1--access-to-jwt">
+        <img src="https://api.iconify.design/fluent-emoji/key.svg" width="42" /><br/>
+        <b>Access To JWT</b><br/>
+        <sub><code>/accesstojwt</code></sub><br/>
+        <sub><img src="https://img.shields.io/badge/2-endpoints-FF6B00?style=flat-square&labelColor=0d1117"/></sub>
+      </a>
+    </td>
+    <td align="center" width="200">
+      <a href="#2--add-item">
+        <img src="https://api.iconify.design/fluent-emoji/t-shirt.svg" width="42" /><br/>
+        <b>Add Item</b><br/>
+        <sub><code>/additem</code></sub><br/>
+        <sub><img src="https://img.shields.io/badge/1-endpoint-8B5CF6?style=flat-square&labelColor=0d1117"/></sub>
+      </a>
+    </td>
+    <td align="center" width="200">
+      <a href="#3--ban-check">
+        <img src="https://api.iconify.design/fluent-emoji/no-entry.svg" width="42" /><br/>
+        <b>Ban Check</b><br/>
+        <sub><code>/bancheck</code></sub><br/>
+        <sub><img src="https://img.shields.io/badge/1-endpoint-FF0000?style=flat-square&labelColor=0d1117"/></sub>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="#4--bind-tools">
+        <img src="https://api.iconify.design/fluent-emoji/link.svg" width="42" /><br/>
+        <b>Bind Tools</b><br/>
+        <sub><code>/bind</code></sub><br/>
+        <sub><img src="https://img.shields.io/badge/5-endpoints-2CA5E0?style=flat-square&labelColor=0d1117"/></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#5-️-banner">
+        <img src="https://api.iconify.design/fluent-emoji/framed-picture.svg" width="42" /><br/>
+        <b>Banner</b><br/>
+        <sub><code>/banner</code></sub><br/>
+        <sub><img src="https://img.shields.io/badge/1-endpoint-FF6B00?style=flat-square&labelColor=0d1117"/></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#6--eat-to-jwt">
+        <img src="https://api.iconify.design/fluent-emoji/admission-tickets.svg" width="42" /><br/>
+        <b>EAT To JWT</b><br/>
+        <sub><code>/eattojwt</code></sub><br/>
+        <sub><img src="https://img.shields.io/badge/1-endpoint-00C851?style=flat-square&labelColor=0d1117"/></sub>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="#7--free-fire-info">
+        <img src="https://api.iconify.design/fluent-emoji/bust-in-silhouette.svg" width="42" /><br/>
+        <b>Free Fire Info</b> <img src="https://api.iconify.design/fluent-emoji/free-button.svg" width="20" align="center"/><br/>
+        <sub><code>/freefireinfo</code></sub><br/>
+        <sub><img src="https://img.shields.io/badge/3-endpoints-00C851?style=flat-square&labelColor=0d1117"/></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#8--friends">
+        <img src="https://api.iconify.design/fluent-emoji/people-hugging.svg" width="42" /><br/>
+        <b>Friends</b><br/>
+        <sub><code>/friends</code></sub><br/>
+        <sub><img src="https://img.shields.io/badge/6-endpoints-2CA5E0?style=flat-square&labelColor=0d1117"/></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#9--guild">
+        <img src="https://api.iconify.design/fluent-emoji/shield.svg" width="42" /><br/>
+        <b>Guild</b><br/>
+        <sub><code>/guild</code></sub><br/>
+        <sub><img src="https://img.shields.io/badge/4-endpoints-FF6B00?style=flat-square&labelColor=0d1117"/></sub>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="#10--imei-info">
+        <img src="https://api.iconify.design/fluent-emoji/mobile-phone.svg" width="42" /><br/>
+        <b>IMEI Info</b><br/>
+        <sub><code>/imei</code></sub><br/>
+        <sub><img src="https://img.shields.io/badge/1-endpoint-00C851?style=flat-square&labelColor=0d1117"/></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#11--jwt-decode">
+        <img src="https://api.iconify.design/fluent-emoji/unlocked.svg" width="42" /><br/>
+        <b>JWT Decode</b><br/>
+        <sub><code>/jwttokendecode</code></sub><br/>
+        <sub><img src="https://img.shields.io/badge/1-endpoint-8B5CF6?style=flat-square&labelColor=0d1117"/></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#12-️-long-bio">
+        <img src="https://api.iconify.design/fluent-emoji/memo.svg" width="42" /><br/>
+        <b>Long Bio</b><br/>
+        <sub><code>/longbio</code></sub><br/>
+        <sub><img src="https://img.shields.io/badge/1-endpoint-FF6B00?style=flat-square&labelColor=0d1117"/></sub>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="#13-️-name-changer">
+        <img src="https://api.iconify.design/fluent-emoji/label.svg" width="42" /><br/>
+        <b>Name Changer</b><br/>
+        <sub><code>/namechanger</code></sub><br/>
+        <sub><img src="https://img.shields.io/badge/1-endpoint-2CA5E0?style=flat-square&labelColor=0d1117"/></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#14--outfits">
+        <img src="https://api.iconify.design/fluent-emoji/coat.svg" width="42" /><br/>
+        <b>Outfits</b><br/>
+        <sub><code>/outfits</code></sub><br/>
+        <sub><img src="https://img.shields.io/badge/1-endpoint-FF6B00?style=flat-square&labelColor=0d1117"/></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#15-️-craftlands">
+        <img src="https://api.iconify.design/fluent-emoji/world-map.svg" width="42" /><br/>
+        <b>Craftlands</b><br/>
+        <sub><code>/craftlands</code></sub><br/>
+        <sub><img src="https://img.shields.io/badge/2-endpoints-00C851?style=flat-square&labelColor=0d1117"/></sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+<br/>
+
+<table>
+  <tr>
+    <td align="center" width="160">
+      <a href="#-access-tiers--free-vs-premium">
+        <img src="https://api.iconify.design/fluent-emoji/locked-with-key.svg" width="32" /><br/>
+        <sub><b>Access Tiers</b></sub>
+      </a>
+    </td>
+    <td align="center" width="160">
+      <a href="#-base-url--authentication">
+        <img src="https://api.iconify.design/fluent-emoji/globe-with-meridians.svg" width="32" /><br/>
+        <sub><b>Base URL & Auth</b></sub>
+      </a>
+    </td>
+    <td align="center" width="160">
+      <a href="#-all-api-groups">
+        <img src="https://api.iconify.design/fluent-emoji/clipboard.svg" width="32" /><br/>
+        <sub><b>All Groups</b></sub>
+      </a>
+    </td>
+    <td align="center" width="160">
+      <a href="#-supported-regions">
+        <img src="https://api.iconify.design/fluent-emoji/globe-showing-asia-australia.svg" width="32" /><br/>
+        <sub><b>Regions</b></sub>
+      </a>
+    </td>
+    <td align="center" width="160">
+      <a href="#️-error-reference">
+        <img src="https://api.iconify.design/fluent-emoji/warning.svg" width="32" /><br/>
+        <sub><b>Errors</b></sub>
+      </a>
+    </td>
+    <td align="center" width="160">
+      <a href="#-contact">
+        <img src="https://api.iconify.design/fluent-emoji/telephone-receiver.svg" width="32" /><br/>
+        <sub><b>Contact</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
 </div>
-
-<table align="center">
-<tr>
-<td valign="top">
-
-**🔗 General**
-- [🔒 Premium Access](#-premium-access-only)
-- [🌐 Base URL & Auth](#-base-url--authentication)
-- [📋 All API Groups](#-all-api-groups)
-- [🌍 Supported Regions](#-supported-regions)
-- [⚠️ Error Reference](#️-error-reference)
-- [🏷️ GitHub Topics](#️-github-topics)
-- [📞 Contact](#-contact)
-
-</td>
-<td valign="top">
-
-**📡 Endpoints (1–8)**
-1. [🔑 Access To JWT](#1--access-to-jwt)
-2. [🎽 Add Item](#2--add-item)
-3. [🚫 Ban Check](#3--ban-check)
-4. [🔗 Bind Tools](#4--bind-tools)
-5. [🖼️ Banner](#5-️-banner)
-6. [🎫 EAT To JWT](#6--eat-to-jwt)
-7. [👤 Free Fire Info](#7--free-fire-info)
-8. [👥 Friends](#8--friends)
-
-</td>
-<td valign="top">
-
-**📡 Endpoints (9–15)**
-9. [🏰 Guild](#9--guild)
-10. [📱 IMEI Info](#10--imei-info)
-11. [🔓 JWT Decode](#11--jwt-decode)
-12. [✏️ Long Bio](#12-️-long-bio)
-13. [🏷️ Name Changer](#13-️-name-changer)
-14. [👗 Outfits](#14--outfits)
-15. [🗺️ Craftlands](#15-️-craftlands)
-
-</td>
-</tr>
-</table>
 
 ---
 
@@ -208,7 +355,7 @@ GET http://siambhau69.eu.cc:9677/
     "Bind Tools"     : "/bind",
     "Banner"         : "/banner",
     "EAT To JWT"     : "/eattojwt",
-    "Free Fire Info" : "/freefireinfo",
+    "Free Fire Info" : "/freefireinfo",       // ← FREE TIER ✨
     "Friends"        : "/friends",
     "Guild"          : "/guild",
     "IMEI Info"      : "/imei",
@@ -713,9 +860,9 @@ GET /eattojwt/eat?eat_token=YOUR_EAT_TOKEN&key=YOUR_KEY
 
 ## 7. 👤 Free Fire Info
 
-<img src="https://img.shields.io/badge/Group-/freefireinfo-FF6B00?style=flat-square&labelColor=0d1117" /> &nbsp; <img src="https://img.shields.io/badge/Endpoints-3-8B5CF6?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/Group-/freefireinfo-FF6B00?style=flat-square&labelColor=0d1117" /> &nbsp; <img src="https://img.shields.io/badge/Endpoints-3-8B5CF6?style=flat-square&labelColor=0d1117" /> &nbsp; <img src="https://img.shields.io/badge/%E2%9C%A8%20FREE%20TIER-Available-00C851?style=flat-square&labelColor=0d1117" />
 
-> Complete profile info, game stats and JWT refresh utility for Free Fire accounts.
+> <img src="https://api.iconify.design/fluent-emoji/free-button.svg" width="18" align="center"/> &nbsp; **This group is FREE** — request a complimentary key on Telegram. Complete profile info, game stats and JWT refresh utility for Free Fire accounts.
 
 ### `GET /freefireinfo/bhau` — Full Player Profile
 
