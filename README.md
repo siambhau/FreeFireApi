@@ -4,7 +4,7 @@
 
 <br/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&pause=800&color=FF6B00&center=true&vCenter=true&multiline=true&width=820&height=80&lines=Free+Fire+Centralized+API+System+v1.0;15+Groups+%E2%80%A2+30+Endpoints+%E2%80%A2+Player+Info+is+FREE+%F0%9F%92%8E)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&pause=800&color=FF6B00&center=true&vCenter=true&multiline=true&width=820&height=80&lines=Free+Fire+Centralized+API+System+v5.0;15+Groups+%E2%80%A2+30+Endpoints+%E2%80%A2+Player+Info+is+FREE+%F0%9F%92%8E)](https://git.io/typing-svg)
 
 <br/>
 
@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-1.0-FF6B00?style=for-the-badge&labelColor=0d1117" />
+  <img src="https://img.shields.io/badge/Version-5.0-FF6B00?style=for-the-badge&labelColor=0d1117" />
   <img src="https://img.shields.io/badge/Game-Free%20Fire-FF0000?style=for-the-badge&logo=firefoxbrowser&logoColor=white&labelColor=0d1117" />
   <img src="https://img.shields.io/badge/Built%20With-Python%20Flask-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=0d1117" />
   <img src="https://img.shields.io/badge/Endpoint%20Groups-15-8B5CF6?style=for-the-badge&logo=apachespark&logoColor=white&labelColor=0d1117" />
@@ -302,7 +302,7 @@ GET http://siambhau69.eu.cc/
 ```json
 {
   "API": "Free Fire Centralized API System",
-  "Version": "1.0",
+  "Version": "5.0",
   "Owner": "SiamBhau",
   "Telegram": "t.me/SiamBhau",
   "Groups": {
