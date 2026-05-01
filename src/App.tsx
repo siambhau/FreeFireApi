@@ -216,15 +216,35 @@ function S1() {
         { name: 'key', type: 'string', required: '✅', description: 'Your API Key' },
       ]} />
       <Coll title="✅ Success / ❌ Error Responses">
-        <CodeBlock>{`// Access-Token Method
-{ "success": true, "region": "BD", "BearerAuth": "eyJhbGciOiJSUzI1NiIs...", "uid": "2579249340" }
+        <CodeBlock>{`// ✅ Access-Token Method
+{
+  "success": true,
+  "region": "BD",
+  "BearerAuth": "eyJhbGciOiJSUzI1NiIs...",
+  "uid": "2579249340"
+}
 
-// UID+Password Method
-{ "region": "BD", "token": "eyJ...JWT...", "token_access": "eyJ...AccessToken...", "uid": "4147917569" }
+// ✅ UID+Password Method
+{
+  "region": "BD",
+  "token": "eyJ...JWT...",
+  "token_access": "eyJ...AccessToken...",
+  "uid": "4147917569"
+}
 
-// Errors
-{ "success": false, "error": "INVALID_TOKEN", "message": "AccessToken invalid." }
-{ "success": false, "error": "INVALID_PLATFORM", "message": "Account registered on another platform" }`}</CodeBlock>
+// ❌ Error — Invalid Token
+{
+  "success": false,
+  "error": "INVALID_TOKEN",
+  "message": "AccessToken invalid."
+}
+
+// ❌ Error — Wrong Platform
+{
+  "success": false,
+  "error": "INVALID_PLATFORM",
+  "message": "Account registered on another platform"
+}`}</CodeBlock>
       </Coll>
 
       <EpH method="GET" path="/accesstojwt/get_jwt" title="Return JWT Only" />
@@ -237,9 +257,23 @@ GET /accesstojwt/get_jwt?guest_uid=UID&guest_password=PASSWORD&key=YOUR_KEY`}</C
         { name: 'key', type: 'string', required: '✅', description: 'Your API Key' },
       ]} />
       <Coll title="✅ Success / ❌ Error Responses">
-        <CodeBlock>{`{ "success": true, "BearerAuth": "eyJhbGciOiJSUzI1NiIs..." }
-{ "success": false, "message": "unregistered or banned account." }
-{ "success": false, "message": "missing access_token (or guest_uid + guest_password)" }`}</CodeBlock>
+        <CodeBlock>{`// ✅ Success
+{
+  "success": true,
+  "BearerAuth": "eyJhbGciOiJSUzI1NiIs..."
+}
+
+// ❌ Error — Banned / Unregistered
+{
+  "success": false,
+  "message": "unregistered or banned account."
+}
+
+// ❌ Error — Missing Parameters
+{
+  "success": false,
+  "message": "missing access_token (or guest_uid + guest_password)"
+}`}</CodeBlock>
       </Coll>
     </section>
   )
@@ -259,9 +293,25 @@ function S2() {
         { name: 'key', type: 'string', required: '✅', description: 'Your API Key' },
       ]} />
       <Coll title="✅ Success / ❌ Error Responses">
-        <CodeBlock>{`{ "status": "success", "message": "Items added successfully!", "items_count": 3 }
-{ "status": "error", "message": "Missing 'items' parameter." }
-{ "status": "error", "message": "Failed to add items", "status_code": 401 }`}</CodeBlock>
+        <CodeBlock>{`// ✅ Success
+{
+  "status": "success",
+  "message": "Items added successfully!",
+  "items_count": 3
+}
+
+// ❌ Error — Missing Parameter
+{
+  "status": "error",
+  "message": "Missing 'items' parameter."
+}
+
+// ❌ Error — Unauthorized
+{
+  "status": "error",
+  "message": "Failed to add items",
+  "status_code": 401
+}`}</CodeBlock>
       </Coll>
     </section>
   )
@@ -280,10 +330,31 @@ function S3() {
         { name: 'key', type: 'string', required: '✅', description: 'Your API Key' },
       ]} />
       <Coll title="✅ Success / ❌ Error Responses">
-        <CodeBlock>{`{ "nickname": "SiamBhau", "region": "BD", "ban_status": "Not banned", "ban_period": null }
-{ "nickname": "HackerXYZ", "region": "IND", "ban_status": "Banned for 3 months", "ban_period": "3 months" }
-{ "error": "ID NOT FOUND" }
-{ "error": "UID parameter is required" }`}</CodeBlock>
+        <CodeBlock>{`// ✅ Not Banned
+{
+  "nickname": "SiamBhau",
+  "region": "BD",
+  "ban_status": "Not banned",
+  "ban_period": null
+}
+
+// ✅ Banned
+{
+  "nickname": "HackerXYZ",
+  "region": "IND",
+  "ban_status": "Banned for 3 months",
+  "ban_period": "3 months"
+}
+
+// ❌ Error — Not Found
+{
+  "error": "ID NOT FOUND"
+}
+
+// ❌ Error — Missing UID
+{
+  "error": "UID parameter is required"
+}`}</CodeBlock>
       </Coll>
     </section>
   )
@@ -303,9 +374,33 @@ function S4() {
         { name: 'key', type: 'string', required: '✅', description: 'Your API Key' },
       ]} />
       <Coll title="✅ Success Responses">
-        <CodeBlock>{`{ "status": "success", "data": { "current_email": "siamxus69@gmail.com" }, "summary": "Email confirmed" }
-{ "status": "success", "data": { "pending_email": "newmail@gmail.com", "countdown_human": "1 Day 0 Hour" } }
-{ "status": "success", "data": { "current_email": "", "pending_email": "" }, "summary": "No recovery email set" }`}</CodeBlock>
+        <CodeBlock>{`// ✅ Email Confirmed
+{
+  "status": "success",
+  "data": {
+    "current_email": "siamxus69@gmail.com"
+  },
+  "summary": "Email confirmed"
+}
+
+// ✅ Pending Email Change
+{
+  "status": "success",
+  "data": {
+    "pending_email": "newmail@gmail.com",
+    "countdown_human": "1 Day 0 Hour"
+  }
+}
+
+// ✅ No Email Set
+{
+  "status": "success",
+  "data": {
+    "current_email": "",
+    "pending_email": ""
+  },
+  "summary": "No recovery email set"
+}`}</CodeBlock>
       </Coll>
 
       <EpH method="POST" path="/bind/changebind" title="Change Bound Email — 5-Step OTP Flow" />
@@ -328,9 +423,25 @@ Content-Type: application/json`}</CodeBlock>
         </table>
       </div>
       <Coll title="✅ Success / ❌ Error Responses">
-        <CodeBlock>{`{ "success": true, "step": 1, "message": "OTP sent to old@gmail.com" }
-{ "success": true, "step": 5, "message": "Email change request submitted successfully!" }
-{ "success": false, "error": "access_token is required" }`}</CodeBlock>
+        <CodeBlock>{`// ✅ Step 1 — OTP Sent
+{
+  "success": true,
+  "step": 1,
+  "message": "OTP sent to old@gmail.com"
+}
+
+// ✅ Step 5 — Email Changed
+{
+  "success": true,
+  "step": 5,
+  "message": "Email change request submitted successfully!"
+}
+
+// ❌ Error — Missing Token
+{
+  "success": false,
+  "error": "access_token is required"
+}`}</CodeBlock>
       </Coll>
 
       <EpH method="POST" path="/bind/unbind" title="Unbind Email — 3-Step Flow" />
@@ -351,18 +462,39 @@ Content-Type: application/json`}</CodeBlock>
         </table>
       </div>
       <Coll title="✅ Success / ❌ Error Responses">
-        <CodeBlock>{`{ "success": true, "step": 3, "message": "Unbind request created successfully!" }
-{ "success": false, "error": "step must be 1 to 3" }`}</CodeBlock>
+        <CodeBlock>{`// ✅ Step 3 — Unbind Submitted
+{
+  "success": true,
+  "step": 3,
+  "message": "Unbind request created successfully!"
+}
+
+// ❌ Error — Invalid Step
+{
+  "success": false,
+  "error": "step must be 1 to 3"
+}`}</CodeBlock>
       </Coll>
 
       <EpH method="POST" path="/bind/cancelbind" title="Cancel Pending Bind Request" />
       <CodeBlock>{`POST /bind/cancelbind?key=YOUR_KEY
 Content-Type: application/json
 
-{ "access_token": "YOUR_TOKEN" }`}</CodeBlock>
+{
+  "access_token": "YOUR_TOKEN"
+}`}</CodeBlock>
       <Coll title="✅ Success / ❌ Error Responses">
-        <CodeBlock>{`{ "success": true, "message": "Bind cancelled successfully!" }
-{ "success": false, "error": "access_token is required" }`}</CodeBlock>
+        <CodeBlock>{`// ✅ Success
+{
+  "success": true,
+  "message": "Bind cancelled successfully!"
+}
+
+// ❌ Error — Missing Token
+{
+  "success": false,
+  "error": "access_token is required"
+}`}</CodeBlock>
       </Coll>
     </section>
   )
@@ -382,12 +514,20 @@ function S5() {
         { name: 'key', type: 'string', required: '✅', description: 'Your API Key' },
       ]} />
       <Coll title="✅ Success / ❌ Error Responses">
-        <CodeBlock>{`HTTP 200 OK  |  Content-Type: image/png
+        <CodeBlock>{`// ✅ Success — Image Response
+HTTP 200 OK  |  Content-Type: image/png
 [PNG Binary — Player Banner with Avatar + Name + Guild + Level]
 // Use as: <img src="API_URL" />
 
-{ "error": "UID required" }
-{ "error": "Failed to generate banner" }`}</CodeBlock>
+// ❌ Error — Missing UID
+{
+  "error": "UID required"
+}
+
+// ❌ Error — Generation Failed
+{
+  "error": "Failed to generate banner"
+}`}</CodeBlock>
       </Coll>
     </section>
   )
@@ -406,13 +546,25 @@ function S6() {
         { name: 'key', type: 'string', required: '✅', description: 'Your API Key' },
       ]} />
       <Coll title="✅ Success / ❌ Error Responses">
-        <CodeBlock>{`{
+        <CodeBlock>{`// ✅ Success
+{
   "status": "success",
-  "account_id": "2579249340", "account_nickname": "SiamBhau",
-  "open_id": "abc123def456ghi789", "access_token": "eyJhbGciOiJIUzI1NiIs...", "region": "BD"
+  "account_id": "2579249340",
+  "account_nickname": "SiamBhau",
+  "open_id": "abc123def456ghi789",
+  "access_token": "eyJhbGciOiJIUzI1NiIs...",
+  "region": "BD"
 }
-{ "error": "Invalid access token or session expired" }
-{ "error": "eat_token parameter is required" }`}</CodeBlock>
+
+// ❌ Error — Expired Token
+{
+  "error": "Invalid access token or session expired"
+}
+
+// ❌ Error — Missing Parameter
+{
+  "error": "eat_token parameter is required"
+}`}</CodeBlock>
       </Coll>
     </section>
   )
@@ -438,18 +590,165 @@ function S7() {
       ]} />
       <Coll title="✅ Full Success Response">
         <CodeBlock>{`{
-  "basicInfo": { "accountId": "2579249340", "nickname": "SiamBhau", "level": 75, "liked": 98765, "regionCode": "BD" },
-  "profileInfo": { "equipedSkills": [706019803], "clothes": [211050001, 214050001] },
-  "socialinfo": { "bio": "FF Pro Player | BD 🔥", "likedTimes": 98765 },
-  "clanBasicInfo": { "clanName": "BhauGuild", "clanLevel": 5, "memberNum": 30 },
-  "petInfo": { "name": "Kitty", "level": 7 },
-  "creditScoreInfo": { "creditScore": 100 }
+  "basicInfo": {
+    "accountId": "2579249340",
+    "accountType": 1,
+    "nickname": "SiamBhau⸙",
+    "region": "BD",
+    "level": 68,
+    "exp": 2464867,
+    "bannerId": 901000011,
+    "headPic": 902028017,
+    "rank": 318,
+    "rankingPoints": 3097,
+    "badgeCnt": 8,
+    "badgeId": 1001000096,
+    "seasonId": 51,
+    "liked": 61695,
+    "lastLoginAt": "1777636197",
+    "csRank": 322,
+    "csRankingPoints": 117,
+    "weaponSkinShows": [
+      907193902,
+      912037001
+    ],
+    "pinId": 910000009,
+    "maxRank": 318,
+    "csMaxRank": 322,
+    "accountPrefers": {},
+    "createAt": "1606659627",
+    "title": 904090025,
+    "externalIconInfo": {
+      "status": "ExternalIconStatus_NOT_IN_USE",
+      "showType": "ExternalIconShowType_FRIEND"
+    },
+    "releaseVersion": "OB53",
+    "showBrRank": true,
+    "showCsRank": true,
+    "socialHighLightsWithBasicInfo": {},
+    "primeInfo": {
+      "primeLevel": 1
+    }
+  },
+  "profileInfo": {
+    "avatarId": 102000022,
+    "skinColor": 50,
+    "clothes": [
+      205000051,
+      211000579,
+      214000022,
+      211001035,
+      203001159,
+      204000581
+    ],
+    "equipedSkills": [
+      16,
+      3406,
+      8,
+      1,
+      16,
+      1806,
+      8,
+      2,
+      16,
+      4306,
+      8,
+      3,
+      16,
+      706
+    ],
+    "isSelected": true,
+    "isSelectedAwaken": true,
+    "unlockType": "UnlockType_LINK",
+    "unlockTime": 1650796023,
+    "isMarkedStar": true
+  },
+  "clanBasicInfo": {
+    "clanId": "3048889605",
+    "clanName": "Jᴜɴɪᴏʀ.Exper",
+    "captainId": "6201276150",
+    "clanLevel": 1,
+    "capacity": 45,
+    "memberNum": 32
+  },
+  "captainBasicInfo": {
+    "accountId": "6201276150",
+    "accountType": 1,
+    "nickname": "সিয়ামভাই10k",
+    "region": "BD",
+    "level": 34,
+    "exp": 68014,
+    "bannerId": 901041021,
+    "headPic": 902041014,
+    "rank": 301,
+    "rankingPoints": 1000,
+    "badgeId": 1001000096,
+    "seasonId": 51,
+    "liked": 14028,
+    "lastLoginAt": "1772468427",
+    "csRank": 301,
+    "weaponSkinShows": [
+      907102812
+    ],
+    "pinId": 910040001,
+    "maxRank": 301,
+    "csMaxRank": 301,
+    "accountPrefers": {},
+    "createAt": "1651754222",
+    "title": 904090015,
+    "externalIconInfo": {
+      "status": "ExternalIconStatus_NOT_IN_USE",
+      "showType": "ExternalIconShowType_FRIEND"
+    },
+    "releaseVersion": "OB52",
+    "socialHighLightsWithBasicInfo": {},
+    "primeInfo": {}
+  },
+  "petInfo": {
+    "id": 1300000126,
+    "level": 4,
+    "exp": 541,
+    "isSelected": true,
+    "skinId": 1310000262,
+    "selectedSkillId": 1315000001,
+    "isMarkedStar": true
+  },
+  "socialInfo": {
+    "accountId": "2579249340",
+    "gender": "Gender_MALE",
+    "language": "Language_EN",
+    "signature": "[b][c][FFFFFF] New Player Gonab :(",
+    "rankShow": "RankShow_BR"
+  },
+  "diamondCostRes": {
+    "diamondCost": 390
+  },
+  "creditScoreInfo": {
+    "creditScore": 100,
+    "rewardState": "REWARD_STATE_UNCLAIMED",
+    "periodicSummaryEndTime": "1777586454"
+  },
+  "Owner": {
+    "Owner": "SiamBhau",
+    "Telegram": "t.me/SiamBhau"
+  }
 }`}</CodeBlock>
       </Coll>
       <Coll title="❌ Error Responses">
-        <CodeBlock>{`{ "error": "Invalid UID or Region. Please check and try again." }
-{ "error": "Please provide UID." }
-{ "error": "Please provide REGION." }`}</CodeBlock>
+        <CodeBlock>{`// ❌ Error — Invalid UID or Region
+{
+  "error": "Invalid UID or Region. Please check and try again."
+}
+
+// ❌ Error — Missing UID
+{
+  "error": "Please provide UID."
+}
+
+// ❌ Error — Missing Region
+{
+  "error": "Please provide REGION."
+}`}</CodeBlock>
       </Coll>
 
       <EpH method="GET" path="/freefireinfo/stats" title="Player Game Stats" />
@@ -464,13 +763,34 @@ GET /freefireinfo/stats?uid=2579249340&region=BD&gamemode=cs&matchmode=RANKED&ke
         { name: 'key', type: 'string', required: '✅', values: '—', default: '—', description: 'Your API Key' },
       ]} />
       <Coll title="✅ BR / CS Stats Responses">
-        <CodeBlock>{`// BR Career
-{ "success": true, "uid": "2579249340", "region": "BD", "gamemode": "br",
-  "stats": { "rankingPoints": 4200, "kills": 15800, "headshots": 6200, "winRate": 28, "kd": 4.21 } }
+        <CodeBlock>{`// ✅ BR Career Stats
+{
+  "success": true,
+  "uid": "2579249340",
+  "region": "BD",
+  "gamemode": "br",
+  "stats": {
+    "rankingPoints": 4200,
+    "kills": 15800,
+    "headshots": 6200,
+    "winRate": 28,
+    "kd": 4.21
+  }
+}
 
-// CS Ranked
-{ "success": true, "uid": "2579249340", "region": "BD", "gamemode": "cs",
-  "stats": { "rankingPoints": 3100, "kills": 8700, "winRate": 58, "mvp": 420 } }`}</CodeBlock>
+// ✅ CS Ranked Stats
+{
+  "success": true,
+  "uid": "2579249340",
+  "region": "BD",
+  "gamemode": "cs",
+  "stats": {
+    "rankingPoints": 3100,
+    "kills": 8700,
+    "winRate": 58,
+    "mvp": 420
+  }
+}`}</CodeBlock>
       </Coll>
     </section>
   )
@@ -493,9 +813,22 @@ GET /friends/friend_action?jwt=YOUR_JWT&uid=TARGET_UID&action=remove&key=YOUR_KE
         { name: 'key', type: 'string', required: '✅', description: 'Your API Key' },
       ]} />
       <Coll title="✅ Success / ❌ Error Responses">
-        <CodeBlock>{`{ "message": "Friend Request Sent Successfully", "response_status": 200 }
-{ "message": "Friend Removed Successfully", "response_status": 200 }
-{ "message": "Action Failed: ALREADY_FRIEND" }`}</CodeBlock>
+        <CodeBlock>{`// ✅ Friend Request Sent
+{
+  "message": "Friend Request Sent Successfully",
+  "response_status": 200
+}
+
+// ✅ Friend Removed
+{
+  "message": "Friend Removed Successfully",
+  "response_status": 200
+}
+
+// ❌ Error — Already Friend
+{
+  "message": "Action Failed: ALREADY_FRIEND"
+}`}</CodeBlock>
       </Coll>
 
       <EpH method="GET" path="/friends/list" title="Full Friends List" />
@@ -505,11 +838,19 @@ GET /friends/friend_action?jwt=YOUR_JWT&uid=TARGET_UID&action=remove&key=YOUR_KE
         { name: 'key', type: 'string', required: '✅', description: 'Your API Key (with friendslist access)' },
       ]} />
       <Coll title="✅ Success Response">
-        <CodeBlock>{`{
-  "success": true, "friends_count": 5,
+        <CodeBlock>{`// ✅ Success
+{
+  "success": true,
+  "friends_count": 5,
   "friends_list": [
-    { "nickname": "ProGamer01", "user_id": "1234567890" },
-    { "nickname": "SnipeKing",  "user_id": "9876543210" }
+    {
+      "nickname": "ProGamer01",
+      "user_id": "1234567890"
+    },
+    {
+      "nickname": "SnipeKing",
+      "user_id": "9876543210"
+    }
   ]
 }`}</CodeBlock>
       </Coll>
@@ -522,8 +863,16 @@ GET /friends/friend_action?jwt=YOUR_JWT&uid=TARGET_UID&action=remove&key=YOUR_KE
         { name: 'key', type: 'string', required: '✅', description: 'Your API Key' },
       ]} />
       <Coll title="✅ Success / ❌ Error Responses">
-        <CodeBlock>{`{ "status": "success", "message": "UID 1234567890 successfully starred ⭐" }
-{ "error": "uid parameter is required and must be a number" }`}</CodeBlock>
+        <CodeBlock>{`// ✅ Success
+{
+  "status": "success",
+  "message": "UID 1234567890 successfully starred ⭐"
+}
+
+// ❌ Error — Invalid UID
+{
+  "error": "uid parameter is required and must be a number"
+}`}</CodeBlock>
       </Coll>
 
       <EpH method="GET" path="/friends/removestar" title="Unstar a Friend" />
@@ -533,7 +882,13 @@ GET /friends/friend_action?jwt=YOUR_JWT&uid=TARGET_UID&action=remove&key=YOUR_KE
         { name: 'uid', type: 'string', required: '✅', description: "Friend's UID to unstar" },
         { name: 'key', type: 'string', required: '✅', description: 'Your API Key' },
       ]} />
-      <Coll title="✅ Success Response"><CodeBlock>{`{ "status": "success", "message": "UID 1234567890 successfully unstarred ✅" }`}</CodeBlock></Coll>
+      <Coll title="✅ Success Response">
+        <CodeBlock>{`// ✅ Success
+{
+  "status": "success",
+  "message": "UID 1234567890 successfully unstarred ✅"
+}`}</CodeBlock>
+      </Coll>
 
       <EpH method="GET" path="/friends/setalias" title="Set Friend Alias" />
       <CodeBlock>{`GET /friends/setalias?jwt=YOUR_JWT&uid=TARGET_UID&alias=BestBro&key=YOUR_KEY`}</CodeBlock>
@@ -544,8 +899,16 @@ GET /friends/friend_action?jwt=YOUR_JWT&uid=TARGET_UID&action=remove&key=YOUR_KE
         { name: 'key', type: 'string', required: '✅', description: 'Your API Key' },
       ]} />
       <Coll title="✅ Success / ❌ Error Responses">
-        <CodeBlock>{`{ "status": "success", "message": "Alias 'BestBro' set for UID 1234567890 ✅" }
-{ "error": "Alias too long! Max 12 characters" }`}</CodeBlock>
+        <CodeBlock>{`// ✅ Success
+{
+  "status": "success",
+  "message": "Alias 'BestBro' set for UID 1234567890 ✅"
+}
+
+// ❌ Error — Alias Too Long
+{
+  "error": "Alias too long! Max 12 characters"
+}`}</CodeBlock>
       </Coll>
 
       <EpH method="GET" path="/friends/removealias" title="Remove Friend Alias" />
@@ -555,7 +918,13 @@ GET /friends/friend_action?jwt=YOUR_JWT&uid=TARGET_UID&action=remove&key=YOUR_KE
         { name: 'uid', type: 'string', required: '✅', description: "Friend's UID" },
         { name: 'key', type: 'string', required: '✅', description: 'Your API Key' },
       ]} />
-      <Coll title="✅ Success Response"><CodeBlock>{`{ "status": "success", "message": "Alias removed for UID 1234567890 ✅" }`}</CodeBlock></Coll>
+      <Coll title="✅ Success Response">
+        <CodeBlock>{`// ✅ Success
+{
+  "status": "success",
+  "message": "Alias removed for UID 1234567890 ✅"
+}`}</CodeBlock>
+      </Coll>
     </section>
   )
 }
@@ -574,10 +943,19 @@ function S9() {
         { name: 'key', type: 'string', required: '✅', description: 'Your API Key (with guildinfo access)' },
       ]} />
       <Coll title="✅ Success Response">
-        <CodeBlock>{`{
-  "id": 3048889605, "clan_name": "BhauGuild", "level": 5, "region": "BD",
-  "welcome_message": "Welcome to BhauGuild!", "score": 98500, "rank": 12,
-  "guild_details": { "members_online": 8, "total_members": 30 }
+        <CodeBlock>{`// ✅ Success
+{
+  "id": 3048889605,
+  "clan_name": "BhauGuild",
+  "level": 5,
+  "region": "BD",
+  "welcome_message": "Welcome to BhauGuild!",
+  "score": 98500,
+  "rank": 12,
+  "guild_details": {
+    "members_online": 8,
+    "total_members": 30
+  }
 }`}</CodeBlock>
       </Coll>
 
@@ -590,8 +968,19 @@ function S9() {
         { name: 'key', type: 'string', required: '✅', description: 'Your API Key' },
       ]} />
       <Coll title="✅ Success / ❌ Error Responses">
-        <CodeBlock>{`{ "success": true, "action": "Join Guild", "clan_id": "3048889605", "uid": "2579249340" }
-{ "success": false, "error": "clan_id required" }`}</CodeBlock>
+        <CodeBlock>{`// ✅ Success
+{
+  "success": true,
+  "action": "Join Guild",
+  "clan_id": "3048889605",
+  "uid": "2579249340"
+}
+
+// ❌ Error — Missing Clan ID
+{
+  "success": false,
+  "error": "clan_id required"
+}`}</CodeBlock>
       </Coll>
 
       <EpH method="GET" path="/guild/leave" title="Leave a Guild" />
@@ -601,7 +990,15 @@ function S9() {
         { name: 'jwt', type: 'string', required: '⚡', description: 'Your JWT' },
         { name: 'key', type: 'string', required: '✅', description: 'Your API Key' },
       ]} />
-      <Coll title="✅ Success Response"><CodeBlock>{`{ "success": true, "action": "Leave Guild", "clan_id": "3048889605", "uid": "2579249340" }`}</CodeBlock></Coll>
+      <Coll title="✅ Success Response">
+        <CodeBlock>{`// ✅ Success
+{
+  "success": true,
+  "action": "Leave Guild",
+  "clan_id": "3048889605",
+  "uid": "2579249340"
+}`}</CodeBlock>
+      </Coll>
 
       <EpH method="POST" path="/guild/create" title="Create a New Guild" />
       <CodeBlock>{`POST /guild/create?key=YOUR_KEY
@@ -609,9 +1006,12 @@ Authorization: Bearer YOUR_JWT
 Content-Type: application/json
 
 {
-  "guild_name": "MyGuild",  "slogan": "Best Guild BD",
-  "payment": 1,             "auto_approval": 2,
-  "avatar": 10,             "tags": [1, 4, 13],
+  "guild_name": "MyGuild",
+  "slogan": "Best Guild BD",
+  "payment": 1,
+  "auto_approval": 2,
+  "avatar": 10,
+  "tags": [1, 4, 13],
   "min_level": 20
 }`}</CodeBlock>
       <div className="table-wrap">
@@ -639,9 +1039,22 @@ Content-Type: application/json
         </table>
       </div>
       <Coll title="✅ Success / ❌ Error Responses">
-        <CodeBlock>{`{ "status": "success", "message": "Guild 'MyGuild' created successfully!", "guild_id": 3055551234 }
-{ "error": "Authorization header required. Format: Bearer <jwt_token>" }
-{ "error": "tags must include 13 (Casual) or 14 (Competition)" }`}</CodeBlock>
+        <CodeBlock>{`// ✅ Success
+{
+  "status": "success",
+  "message": "Guild 'MyGuild' created successfully!",
+  "guild_id": 3055551234
+}
+
+// ❌ Error — Missing Auth Header
+{
+  "error": "Authorization header required. Format: Bearer <jwt_token>"
+}
+
+// ❌ Error — Invalid Tags
+{
+  "error": "tags must include 13 (Casual) or 14 (Competition)"
+}`}</CodeBlock>
       </Coll>
     </section>
   )
@@ -660,15 +1073,29 @@ function S10() {
         { name: 'key', type: 'string', required: '✅', description: 'Your API Key' },
       ]} />
       <Coll title="✅ Success / ❌ Error Responses">
-        <CodeBlock>{`{
+        <CodeBlock>{`// ✅ Success
+{
   "status": "success",
   "decoded": {
-    "account_id": "2579249340", "nickname": "SiamBhau", "lock_region": "BD",
-    "exp": "2026-05-29 13:11:47 UTC", "iss": "freefire-game-server"
+    "account_id": "2579249340",
+    "nickname": "SiamBhau",
+    "lock_region": "BD",
+    "exp": "2026-05-29 13:11:47 UTC",
+    "iss": "freefire-game-server"
   }
 }
-{ "status": "error", "message": "Missing token parameter" }
-{ "status": "error", "message": "Token has expired" }`}</CodeBlock>
+
+// ❌ Error — Missing Token
+{
+  "status": "error",
+  "message": "Missing token parameter"
+}
+
+// ❌ Error — Expired Token
+{
+  "status": "error",
+  "message": "Token has expired"
+}`}</CodeBlock>
       </Coll>
     </section>
   )
@@ -695,9 +1122,26 @@ function S11() {
         { name: 'key', type: 'string', required: '✅', description: 'Your API Key' },
       ]} />
       <Coll title="✅ Success / ❌ Error Responses">
-        <CodeBlock>{`{ "Owner": "SiamBhau", "status": "Success", "login_method": "Direct JWT", "code": 200 }
-{ "status": "Error", "code": 400, "error": "Missing 'bio' parameter" }
-{ "status": "Unauthorized (Invalid JWT)", "code": 401 }`}</CodeBlock>
+        <CodeBlock>{`// ✅ Success
+{
+  "Owner": "SiamBhau",
+  "status": "Success",
+  "login_method": "Direct JWT",
+  "code": 200
+}
+
+// ❌ Error — Missing Bio
+{
+  "status": "Error",
+  "code": 400,
+  "error": "Missing 'bio' parameter"
+}
+
+// ❌ Error — Unauthorized
+{
+  "status": "Unauthorized (Invalid JWT)",
+  "code": 401
+}`}</CodeBlock>
       </Coll>
     </section>
   )
@@ -717,9 +1161,24 @@ function S12() {
         { name: 'key', type: 'string', required: '✅', description: 'Your API Key' },
       ]} />
       <Coll title="✅ Success / ❌ Error Responses">
-        <CodeBlock>{`{ "Owner": "SiamBhau", "status": "success", "raw_content": "0a020801" }
-{ "Owner": "SiamBhau", "status": "failed", "text": "BR_NAME_ALREADY_USED" }
-{ "error": "token and name are required" }`}</CodeBlock>
+        <CodeBlock>{`// ✅ Success
+{
+  "Owner": "SiamBhau",
+  "status": "success",
+  "raw_content": "0a020801"
+}
+
+// ❌ Error — Name Already Used
+{
+  "Owner": "SiamBhau",
+  "status": "failed",
+  "text": "BR_NAME_ALREADY_USED"
+}
+
+// ❌ Error — Missing Parameters
+{
+  "error": "token and name are required"
+}`}</CodeBlock>
       </Coll>
     </section>
   )
@@ -739,12 +1198,20 @@ function S13() {
         { name: 'key', type: 'string', required: '✅', values: '—', default: '—', description: 'Your API Key' },
       ]} />
       <Coll title="✅ Success / ❌ Error Responses">
-        <CodeBlock>{`HTTP 200 OK  |  Content-Type: image/png
+        <CodeBlock>{`// ✅ Success — Image Response
+HTTP 200 OK  |  Content-Type: image/png
 [PNG Binary — 1024×1024px outfit image]
 // Use as: <img src="API_URL" />
 
-{ "error": "uid parameter is required" }
-{ "error": "Failed to fetch player info" }`}</CodeBlock>
+// ❌ Error — Missing UID
+{
+  "error": "uid parameter is required"
+}
+
+// ❌ Error — Fetch Failed
+{
+  "error": "Failed to fetch player info"
+}`}</CodeBlock>
       </Coll>
     </section>
   )
@@ -766,9 +1233,18 @@ function S14() {
         { name: 'key', type: 'string', required: '✅', values: '—', default: '—', description: 'Your API Key' },
       ]} />
       <Coll title="✅ Success Response">
-        <CodeBlock>{`{
-  "code": 0, "status": "success",
-  "data": { "map_info": { "workshop_code": "#ABC123", "author_name": "MapMaker01", "map_name": "Sniper Arena", "like_count": 8420 } }
+        <CodeBlock>{`// ✅ Success
+{
+  "code": 0,
+  "status": "success",
+  "data": {
+    "map_info": {
+      "workshop_code": "#ABC123",
+      "author_name": "MapMaker01",
+      "map_name": "Sniper Arena",
+      "like_count": 8420
+    }
+  }
 }`}</CodeBlock>
       </Coll>
 
@@ -782,19 +1258,42 @@ function S14() {
         { name: 'key', type: 'string', required: '✅', values: '—', default: '—', description: 'Your API Key' },
       ]} />
       <Coll title="✅ Success Response">
-        <CodeBlock>{`{
-  "code": 0, "status": "success",
+        <CodeBlock>{`// ✅ Success
+{
+  "code": 0,
+  "status": "success",
   "data": {
-    "basic_info": { "map_name": "Sniper Arena", "author": "MapMaker01" },
-    "gameplay_info": { "game_mode": { "id": 12, "name": "Sniper Only" } },
-    "tags": [{ "id": 1, "name": "Action" }, { "id": 4, "name": "PvP" }],
-    "social_info": { "subscribe_count": 15890, "like_count": 8420 }
+    "basic_info": {
+      "map_name": "Sniper Arena",
+      "author": "MapMaker01"
+    },
+    "gameplay_info": {
+      "game_mode": {
+        "id": 12,
+        "name": "Sniper Only"
+      }
+    },
+    "tags": [
+      { "id": 1, "name": "Action" },
+      { "id": 4, "name": "PvP" }
+    ],
+    "social_info": {
+      "subscribe_count": 15890,
+      "like_count": 8420
+    }
   }
 }`}</CodeBlock>
       </Coll>
       <Coll title="❌ Error Responses">
-        <CodeBlock>{`{ "error": "map_code is required" }
-{ "error": "API returned status 404" }`}</CodeBlock>
+        <CodeBlock>{`// ❌ Error — Missing Map Code
+{
+  "error": "map_code is required"
+}
+
+// ❌ Error — Not Found
+{
+  "error": "API returned status 404"
+}`}</CodeBlock>
       </Coll>
     </section>
   )
@@ -825,10 +1324,10 @@ export default function App() {
             <a href="http://siambhau69.eu.cc" target="_blank" rel="noreferrer">
               <img src="https://img.shields.io/badge/%F0%9F%9F%A2%20API-Online%20%26%20Running-00C851?style=for-the-badge&labelColor=222" alt="API Online" />
             </a>
-            <a href="https://t.me/SiamBhau" target="_blank" rel="noreferrer">
+            <a href="https://t.me/SiamBhau?text=https%3A%2F%2Fsiambhau69.eu.cc%0A%0AHi%20%40SiamBhau%20👋,%20I'd%20like%20to%20get%20a%20FREE%20API%20key%20for%20the%20Free%20Fire%20Info%20endpoints.%20Could%20you%20please%20activate%20one%20for%20me%3F%20🙏" target="_blank" rel="noreferrer">
               <img src="https://img.shields.io/badge/%E2%9C%A8%20Free%20Key-Free%20Fire%20Info-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white&labelColor=222" alt="Free Key" />
             </a>
-            <a href="https://t.me/SiamBhau" target="_blank" rel="noreferrer">
+            <a href="https://t.me/SiamBhau?text=https%3A%2F%2Fsiambhau69.eu.cc%0A%0AHi%20%40SiamBhau%20👋,%20I%20want%20to%20BUY%20a%20Premium%20API%20key%20for%20the%20Free%20Fire%20Centralized%20API.%20Please%20share%20your%20available%20plans,%20pricing%20%26%20payment%20methods.%20💎" target="_blank" rel="noreferrer">
               <img src="https://img.shields.io/badge/%F0%9F%92%8E%20Premium%20Key-Buy%20Now-FF6B00?style=for-the-badge&logo=telegram&logoColor=white&labelColor=222" alt="Premium Key" />
             </a>
           </div>
@@ -873,11 +1372,30 @@ export default function App() {
           </p>
           <CodeBlock>{`http://siambhau69.eu.cc/<group>/<endpoint>?param=VALUE&key=YOUR_KEY`}</CodeBlock>
           <Coll title="🔐 Authentication Error Responses (HTTP 403)">
-            <CodeBlock>{`{ "error": "API key required. Use ?key=YOUR_KEY | Contact: t.me/SiamBhau" }
-{ "error": "Invalid API key. | Contact: t.me/SiamBhau" }
-{ "error": "Key is inactive. Contact admin. | Contact: t.me/SiamBhau" }
-{ "error": "Key expired on 30-06-2025. | Contact: t.me/SiamBhau" }
-{ "error": "Key has no access to 'bancheck' endpoint. | Contact: t.me/SiamBhau" }`}</CodeBlock>
+            <CodeBlock>{`// ❌ Error — Key Required
+{
+  "error": "API key required. Use ?key=YOUR_KEY | Contact: t.me/SiamBhau"
+}
+
+// ❌ Error — Invalid Key
+{
+  "error": "Invalid API key. | Contact: t.me/SiamBhau"
+}
+
+// ❌ Error — Inactive Key
+{
+  "error": "Key is inactive. Contact admin. | Contact: t.me/SiamBhau"
+}
+
+// ❌ Error — Expired Key
+{
+  "error": "Key expired on 30-06-2025. | Contact: t.me/SiamBhau"
+}
+
+// ❌ Error — No Access
+{
+  "error": "Key has no access to 'bancheck' endpoint. | Contact: t.me/SiamBhau"
+}`}</CodeBlock>
           </Coll>
         </section>
 
@@ -892,15 +1410,24 @@ export default function App() {
           <CodeBlock>{`GET http://siambhau69.eu.cc/`}</CodeBlock>
           <Coll title="📄 View Full Response (14 Groups)">
             <CodeBlock>{`{
-  "API": "Free Fire Centralized API System", "Version": "5.0", "Owner": "SiamBhau",
+  "API": "Free Fire Centralized API System",
+  "Version": "5.0",
+  "Owner": "SiamBhau",
   "Groups": {
-    "Access To JWT"  : "/accesstojwt",   "Add Item"       : "/additem",
-    "Ban Check"      : "/bancheck",       "Bind Tools"     : "/bind",
-    "Banner"         : "/banner",         "EAT To JWT"     : "/eattojwt",
-    "Free Fire Info" : "/freefireinfo",   "Friends"        : "/friends",
-    "Guild"          : "/guild",          "JWT Decode"     : "/jwttokendecode",
-    "Long Bio"       : "/longbio",        "Name Changer"   : "/namechanger",
-    "Outfits"        : "/outfits",        "Craftlands"     : "/craftlands"
+    "Access To JWT"  : "/accesstojwt",
+    "Add Item"       : "/additem",
+    "Ban Check"      : "/bancheck",
+    "Bind Tools"     : "/bind",
+    "Banner"         : "/banner",
+    "EAT To JWT"     : "/eattojwt",
+    "Free Fire Info" : "/freefireinfo",
+    "Friends"        : "/friends",
+    "Guild"          : "/guild",
+    "JWT Decode"     : "/jwttokendecode",
+    "Long Bio"       : "/longbio",
+    "Name Changer"   : "/namechanger",
+    "Outfits"        : "/outfits",
+    "Craftlands"     : "/craftlands"
   }
 }`}</CodeBlock>
           </Coll>
