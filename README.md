@@ -4,7 +4,7 @@
 
 <br/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&pause=800&color=FF6B00&center=true&vCenter=true&multiline=true&width=820&height=80&lines=Free+Fire+Centralized+API+System+v5.0;15+Groups+%E2%80%A2+30+Endpoints+%E2%80%A2+Player+Info+is+FREE+%F0%9F%92%8E)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&pause=800&color=FF6B00&center=true&vCenter=true&multiline=true&width=820&height=80&lines=Free+Fire+Centralized+API+System+v5.0;14+Groups+%E2%80%A2+29+Endpoints+%E2%80%A2+Player+Info+is+FREE+%F0%9F%92%8E)](https://git.io/typing-svg)
 
 <br/>
 
@@ -24,8 +24,8 @@
   <img src="https://img.shields.io/badge/Version-5.0-FF6B00?style=for-the-badge&labelColor=0d1117" />
   <img src="https://img.shields.io/badge/Game-Free%20Fire-FF0000?style=for-the-badge&logo=firefoxbrowser&logoColor=white&labelColor=0d1117" />
   <img src="https://img.shields.io/badge/Built%20With-Python%20Flask-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=0d1117" />
-  <img src="https://img.shields.io/badge/Endpoint%20Groups-15-8B5CF6?style=for-the-badge&logo=apachespark&logoColor=white&labelColor=0d1117" />
-  <img src="https://img.shields.io/badge/Total%20Endpoints-30-00C851?style=for-the-badge&labelColor=0d1117" />
+  <img src="https://img.shields.io/badge/Endpoint%20Groups-14-8B5CF6?style=for-the-badge&logo=apachespark&logoColor=white&labelColor=0d1117" />
+  <img src="https://img.shields.io/badge/Total%20Endpoints-29-00C851?style=for-the-badge&labelColor=0d1117" />
 </p>
 
 <br/>
@@ -40,7 +40,7 @@
 
 <blockquote>
 <img src="https://img.shields.io/badge/⚡-PREMIUM-FF6B00?style=flat-square&labelColor=0d1117" /> &nbsp;
-The most complete <b>Centralized REST API for Free Fire</b> — Player Info, JWT Generator, Ban Check, Guild Tools, Friend Actions, Bind/Unbind, Outfit Renderer, Craftlands and more. <b>30 endpoints across 15 groups</b>, all in one place.
+The most complete <b>Centralized REST API for Free Fire</b> — Player Info, JWT Generator, Ban Check, Guild Tools, Friend Actions, Bind/Unbind, Outfit Renderer, Craftlands and more. <b>29 endpoints across 14 groups</b>, all in one place.
 </blockquote>
 
 </div>
@@ -137,15 +137,7 @@ The most complete <b>Centralized REST API for Free Fire</b> — Player Info, JWT
   </tr>
   <tr>
     <td align="center">
-      <a href="#10--imei-info">
-        <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f4f1/512.gif" width="28" /><br/>
-        <b>IMEI Info</b><br/>
-        <sub><code>/imei</code></sub><br/>
-        <sub><img src="https://img.shields.io/badge/1-endpoint-00C851?style=flat-square&labelColor=0d1117"/></sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="#11--jwt-decode">
+      <a href="#10--jwt-decode">
         <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f513/512.gif" width="28" /><br/>
         <b>JWT Decode</b><br/>
         <sub><code>/jwttokendecode</code></sub><br/>
@@ -153,7 +145,7 @@ The most complete <b>Centralized REST API for Free Fire</b> — Player Info, JWT
       </a>
     </td>
     <td align="center">
-      <a href="#12-️-long-bio">
+      <a href="#11-️-long-bio">
         <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f4dd/512.gif" width="28" /><br/>
         <b>Long Bio</b><br/>
         <sub><code>/longbio</code></sub><br/>
@@ -163,7 +155,7 @@ The most complete <b>Centralized REST API for Free Fire</b> — Player Info, JWT
   </tr>
   <tr>
     <td align="center">
-      <a href="#13-️-name-changer">
+      <a href="#12-️-name-changer">
         <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f3f7_fe0f/512.gif" width="28" /><br/>
         <b>Name Changer</b><br/>
         <sub><code>/namechanger</code></sub><br/>
@@ -171,7 +163,7 @@ The most complete <b>Centralized REST API for Free Fire</b> — Player Info, JWT
       </a>
     </td>
     <td align="center">
-      <a href="#14--outfits">
+      <a href="#13--outfits">
         <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f9e5/512.gif" width="28" /><br/>
         <b>Outfits</b><br/>
         <sub><code>/outfits</code></sub><br/>
@@ -179,7 +171,7 @@ The most complete <b>Centralized REST API for Free Fire</b> — Player Info, JWT
       </a>
     </td>
     <td align="center">
-      <a href="#15-️-craftlands">
+      <a href="#14-️-craftlands">
         <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f5fa_fe0f/512.gif" width="28" /><br/>
         <b>Craftlands</b><br/>
         <sub><code>/craftlands</code></sub><br/>
@@ -296,7 +288,7 @@ GET http://siambhau69.eu.cc/
 ```
 
 <details>
-<summary><b>📄 View Full Response (15 Groups)</b></summary>
+<summary><b>📄 View Full Response (14 Groups)</b></summary>
 <br/>
 
 ```json
@@ -315,7 +307,6 @@ GET http://siambhau69.eu.cc/
     "Free Fire Info" : "/freefireinfo",       // ← FREE TIER ✨
     "Friends"        : "/friends",
     "Guild"          : "/guild",
-    "IMEI Info"      : "/imei",
     "JWT Decode"     : "/jwttokendecode",
     "Long Bio"       : "/longbio",
     "Name Changer"   : "/namechanger",
@@ -1648,57 +1639,7 @@ Content-Type: application/json
 
 ---
 
-## 10. 📱 IMEI Info
-
-<img src="https://img.shields.io/badge/Group-/imei-00C851?style=flat-square&labelColor=0d1117" /> &nbsp; <img src="https://img.shields.io/badge/Endpoints-1-8B5CF6?style=flat-square&labelColor=0d1117" />
-
-> Looks up device brand, model, country, network, and release info using a 15-digit IMEI number.
-
-### `GET /imei/info` — IMEI Device Lookup
-
-```http
-GET /imei/info?imei=356728113476450&key=YOUR_KEY
-```
-
-| Parameter | Type | Required | Description |
-|-----------|------|:--------:|-------------|
-| `imei` | string | ✅ | Device IMEI (15 digits) |
-| `key` | string | ✅ | Your API Key |
-
-<details>
-<summary><b>✅ Success / ❌ Error Responses</b></summary>
-<br/>
-
-```json
-{
-  "imei": "356728113476450",
-  "brand": "Samsung",
-  "model": "Galaxy A32 5G",
-  "manufacturer": "Samsung Electronics Co., Ltd.",
-  "country": "South Korea",
-  "network": "GSM / HSPA / LTE / 5G",
-  "released": "2021",
-  "sim": "Dual SIM (Nano-SIM, dual stand-by)",
-  "status": "Available. Released 2021, January 13"
-}
-
-
-{
-  "error": "IMEI is required!"
-}
-
-
-{
-  "error": "Something went wrong!",
-  "details": "Connection timeout"
-}
-```
-
-</details>
-
----
-
-## 11. 🔓 JWT Decode
+## 10. 🔓 JWT Decode
 
 <img src="https://img.shields.io/badge/Group-/jwttokendecode-8B5CF6?style=flat-square&labelColor=0d1117" /> &nbsp; <img src="https://img.shields.io/badge/Endpoints-1-8B5CF6?style=flat-square&labelColor=0d1117" />
 
@@ -1758,7 +1699,7 @@ GET /jwttokendecode/decode?token=YOUR_JWT_TOKEN&key=YOUR_KEY
 
 ---
 
-## 12. ✏️ Long Bio
+## 11. ✏️ Long Bio
 
 <img src="https://img.shields.io/badge/Group-/longbio-FF6B00?style=flat-square&labelColor=0d1117" /> &nbsp; <img src="https://img.shields.io/badge/Endpoints-1-8B5CF6?style=flat-square&labelColor=0d1117" />
 
@@ -1849,7 +1790,7 @@ GET /longbio/bio_upload?bio=BIO_TEXT&access=YOUR_ACCESS_TOKEN&key=YOUR_KEY
 
 ---
 
-## 13. 🏷️ Name Changer
+## 12. 🏷️ Name Changer
 
 <img src="https://img.shields.io/badge/Group-/namechanger-2CA5E0?style=flat-square&labelColor=0d1117" /> &nbsp; <img src="https://img.shields.io/badge/Endpoints-1-8B5CF6?style=flat-square&labelColor=0d1117" />
 
@@ -1900,7 +1841,7 @@ GET /namechanger/name?token=YOUR_JWT&name=SiamBhau&key=YOUR_KEY
 
 ---
 
-## 14. 👗 Outfits
+## 13. 👗 Outfits
 
 <img src="https://img.shields.io/badge/Group-/outfits-FF6B00?style=flat-square&labelColor=0d1117" /> &nbsp; <img src="https://img.shields.io/badge/Endpoints-1-8B5CF6?style=flat-square&labelColor=0d1117" />
 
@@ -1952,7 +1893,7 @@ Outfit slots: Head, Body, Legs, Shoes, Backpack, Mask, Arm + Character + Weapon 
 
 ---
 
-## 15. 🗺️ Craftlands
+## 14. 🗺️ Craftlands
 
 <img src="https://img.shields.io/badge/Group-/craftlands-00C851?style=flat-square&labelColor=0d1117" /> &nbsp; <img src="https://img.shields.io/badge/Endpoints-2-8B5CF6?style=flat-square&labelColor=0d1117" />
 
