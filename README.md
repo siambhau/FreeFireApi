@@ -1004,62 +1004,145 @@ GET /freefireinfo/bhau?uid=2579249340&region=BD&key=YOUR_KEY
 {
   "basicInfo": {
     "accountId": "2579249340",
-    "nickname": "SiamBhau",
-    "level": 75,
-    "exp": 9850000,
-    "bannerId": 902000008,
-    "headPic": 102000007,
-    "rank": 220,
-    "rankingPoints": 4200,
-    "liked": 98765,
-    "regionCode": "BD",
-    "maxRank": 220,
-    "cs_rank": 605,
-    "cs_rankingPoints": 3100,
+    "accountType": 1,
+    "nickname": "SiamBhau⸙",
+    "region": "BD",
+    "level": 68,
+    "exp": 2464867,
+    "bannerId": 901000011,
+    "headPic": 902028017,
+    "rank": 318,
+    "rankingPoints": 3097,
+    "badgeCnt": 8,
+    "badgeId": 1001000096,
+    "seasonId": 51,
+    "liked": 61695,
+    "lastLoginAt": "1777636197",
+    "csRank": 322,
+    "csRankingPoints": 117,
+    "weaponSkinShows": [
+      907193902,
+      912037001
+    ],
+    "pinId": 910000009,
+    "maxRank": 318,
+    "csMaxRank": 322,
+    "accountPrefers": {},
+    "createAt": "1606659627",
+    "title": 904090025,
+    "externalIconInfo": {
+      "status": "ExternalIconStatus_NOT_IN_USE",
+      "showType": "ExternalIconShowType_FRIEND"
+    },
+    "releaseVersion": "OB53",
     "showBrRank": true,
-    "createAt": "1609459200",
-    "lastLoginAt": "1748000000"
+    "showCsRank": true,
+    "socialHighLightsWithBasicInfo": {},
+    "primeInfo": {
+      "primeLevel": 1
+    }
   },
   "profileInfo": {
-    "equipedSkills": [
-      706019803,
-      716009801,
-      809000001
-    ],
+    "avatarId": 102000022,
+    "skinColor": 50,
     "clothes": [
-      211050001,
-      214050001,
-      208050001
+      205000051,
+      211000579,
+      214000022,
+      211001035,
+      203001159,
+      204000581
     ],
-    "badge": [
-      1000000044
+    "equipedSkills": [
+      16,
+      3406,
+      8,
+      1,
+      16,
+      1806,
+      8,
+      2,
+      16,
+      4306,
+      8,
+      3,
+      16,
+      706
     ],
-    "badgeCount": 12,
-    "petEquipment": [
-      1400000001
-    ]
-  },
-  "socialinfo": {
-    "bio": "FF Pro Player | BD 🔥",
-    "likedTimes": 98765,
-    "language": "bn"
+    "isSelected": true,
+    "isSelectedAwaken": true,
+    "unlockType": "UnlockType_LINK",
+    "unlockTime": 1650796023,
+    "isMarkedStar": true
   },
   "clanBasicInfo": {
     "clanId": "3048889605",
-    "clanName": "BhauGuild",
-    "clanLevel": 5,
-    "memberNum": 30,
-    "captainId": "2579249340"
+    "clanName": "Jᴜɴɪᴏʀ.Exper",
+    "captainId": "6201276150",
+    "clanLevel": 1,
+    "capacity": 45,
+    "memberNum": 32
+  },
+  "captainBasicInfo": {
+    "accountId": "6201276150",
+    "accountType": 1,
+    "nickname": "সিয়ামভাই10k",
+    "region": "BD",
+    "level": 34,
+    "exp": 68014,
+    "bannerId": 901041021,
+    "headPic": 902041014,
+    "rank": 301,
+    "rankingPoints": 1000,
+    "badgeId": 1001000096,
+    "seasonId": 51,
+    "liked": 14028,
+    "lastLoginAt": "1772468427",
+    "csRank": 301,
+    "weaponSkinShows": [
+      907102812
+    ],
+    "pinId": 910040001,
+    "maxRank": 301,
+    "csMaxRank": 301,
+    "accountPrefers": {},
+    "createAt": "1651754222",
+    "title": 904090015,
+    "externalIconInfo": {
+      "status": "ExternalIconStatus_NOT_IN_USE",
+      "showType": "ExternalIconShowType_FRIEND"
+    },
+    "releaseVersion": "OB52",
+    "socialHighLightsWithBasicInfo": {},
+    "primeInfo": {}
   },
   "petInfo": {
-    "id": 1400000001,
-    "name": "Kitty",
-    "level": 7,
-    "exp": 12300,
-    "isSelected": true
+    "id": 1300000126,
+    "level": 4,
+    "exp": 541,
+    "isSelected": true,
+    "skinId": 1310000262,
+    "selectedSkillId": 1315000001,
+    "isMarkedStar": true
+  },
+  "socialInfo": {
+    "accountId": "2579249340",
+    "gender": "Gender_MALE",
+    "language": "Language_EN",
+    "signature": "[b][c][FFFFFF] New Player Gonab :(",
+    "rankShow": "RankShow_BR"
+  },
+  "diamondCostRes": {
+    "diamondCost": 390
   },
   "creditScoreInfo": {
-    "creditScore": 100
+    "creditScore": 100,
+    "rewardState": "REWARD_STATE_UNCLAIMED",
+    "periodicSummaryEndTime": "1777586454"
+  },
+  "Owner": {
+    "Owner": "SiamBhau",
+    "Telegram": "t.me/SiamBhau"
   }
 }
 ```
