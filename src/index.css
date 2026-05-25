@@ -73,7 +73,7 @@ img { max-width: 100%; }
 #root { width: 100%; }
 
 
-/* ── ANIMATIONS ─────────────────────────────── */
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -125,7 +125,7 @@ img { max-width: 100%; }
 }
 
 
-/* ── TOPBAR ─────────────────────────────────── */
+
 .topbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -263,7 +263,7 @@ img { max-width: 100%; }
 .hamburger svg { display: block; }
 
 
-/* ── LAYOUT ─────────────────────────────────── */
+
 .docs-layout {
   padding-top: var(--topbar-h);
   display: flex;
@@ -271,7 +271,7 @@ img { max-width: 100%; }
 }
 
 
-/* ── SIDEBAR ─────────────────────────────────── */
+
 .sidebar {
   position: fixed;
   top: var(--topbar-h);
@@ -389,7 +389,7 @@ img { max-width: 100%; }
 }
 
 
-/* ── MAIN ───────────────────────────────────── */
+
 .docs-main {
   margin-left: var(--sidebar-w);
   flex: 1;
@@ -402,7 +402,7 @@ img { max-width: 100%; }
 }
 
 
-/* ── HERO ───────────────────────────────────── */
+
 .hero {
   position: relative;
   border-radius: 20px;
@@ -557,7 +557,7 @@ img { max-width: 100%; }
 }
 
 
-/* ── API GROUPS OVERVIEW ─────────────────────── */
+
 .section-label {
   display: flex;
   align-items: center;
@@ -652,7 +652,7 @@ img { max-width: 100%; }
 }
 
 
-/* ── SECTION HEADING ─────────────────────────── */
+
 .sec-wrap {
   padding: 36px 0 0;
 }
@@ -690,7 +690,7 @@ img { max-width: 100%; }
 .sec-heading .anchor:hover { color: var(--orange); }
 
 
-/* ── SEC BADGES ──────────────────────────────── */
+
 .sec-badges {
   display: flex;
   flex-wrap: wrap;
@@ -721,7 +721,7 @@ img { max-width: 100%; }
 }
 
 
-/* ── DESC BLOCK ──────────────────────────────── */
+
 .desc-block {
   background: var(--yellow-bg);
   border: 1px solid var(--yellow-border);
@@ -736,7 +736,7 @@ img { max-width: 100%; }
 .desc-block b, .desc-block strong { color: var(--text); }
 
 
-/* ── ENDPOINT CARD ───────────────────────────── */
+
 .ep-card {
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -777,7 +777,7 @@ img { max-width: 100%; }
   margin-bottom: -4px;
 }
 
-/* ── ENDPOINT HEADING (legacy, kept for step tables) ── */
+
 .ep-wrap {
   margin: 24px 0 14px;
 }
@@ -829,7 +829,7 @@ img { max-width: 100%; }
 .ep-title { font-size: 13px; color: var(--text-muted); font-weight: 500; }
 
 
-/* ── CODE BLOCKS ─────────────────────────────── */
+
 .code-wrap {
   position: relative;
   margin: 8px 0;
@@ -893,7 +893,7 @@ img { max-width: 100%; }
 }
 
 
-/* ── SUB METHOD ──────────────────────────────── */
+
 .sub-method {
   display: inline-flex;
   align-items: center;
@@ -921,7 +921,7 @@ img { max-width: 100%; }
 }
 
 
-/* ── TABLES ──────────────────────────────────── */
+
 .table-wrap { overflow-x: auto; margin: 10px 0; }
 .param-table {
   width: 100%;
@@ -976,7 +976,7 @@ img { max-width: 100%; }
 .req-alt { color: var(--yellow); font-weight: 700; }
 
 
-/* ── COLLAPSIBLE ─────────────────────────────── */
+
 .coll {
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -1015,7 +1015,7 @@ img { max-width: 100%; }
 }
 
 
-/* ── STEP TABLE ──────────────────────────────── */
+
 .step-table {
   width: 100%;
   border-collapse: collapse;
@@ -1054,7 +1054,7 @@ img { max-width: 100%; }
 }
 
 
-/* ── REGIONS TABLE ───────────────────────────── */
+
 .regions-table {
   width: 100%;
   border-collapse: collapse;
@@ -1094,7 +1094,7 @@ img { max-width: 100%; }
 }
 
 
-/* ── ERROR TABLE ─────────────────────────────── */
+
 .error-table {
   width: 100%;
   border-collapse: collapse;
@@ -1135,7 +1135,7 @@ img { max-width: 100%; }
 .status-504 { background: var(--yellow-bg); color: var(--yellow); }
 
 
-/* ── AUTH NOTE ───────────────────────────────── */
+
 .auth-note {
   background: var(--orange-dim2);
   border: 1px solid var(--orange-border);
@@ -1156,7 +1156,7 @@ img { max-width: 100%; }
 .auth-note b { color: var(--text); }
 
 
-/* ── CONTACT ─────────────────────────────────── */
+
 .contact-wrap {
   background: linear-gradient(135deg, #fff8f4, #fff);
   border: 1px solid var(--orange-border);
@@ -1201,7 +1201,7 @@ img { max-width: 100%; }
 .copyright { color: var(--gray-400); font-size: 12px; margin-top: 20px; }
 
 
-/* ── DIVIDER ─────────────────────────────────── */
+
 .divider {
   border: none;
   border-top: 1px solid var(--border2);
@@ -1209,14 +1209,14 @@ img { max-width: 100%; }
 }
 
 
-/* ── SCROLLBAR ───────────────────────────────── */
+
 ::-webkit-scrollbar { width: 6px; height: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--gray-200); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--gray-300); }
 
 
-/* ── RESPONSIVE ──────────────────────────────── */
+
 @media (max-width: 920px) {
   :root { --sidebar-w: 0px; }
   .sidebar { transform: translateX(-272px); width: 272px; z-index: 300; }
