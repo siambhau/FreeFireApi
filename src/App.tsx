@@ -10,9 +10,6 @@ import {
 } from 'lucide-react'
 
 
-/* ─────────────────────────────────────────────
-   SCROLL ANIMATION HOOK
-───────────────────────────────────────────── */
 function useInView(ref: React.RefObject<HTMLElement | null>) {
   const [visible, setVisible] = useState(false)
   useEffect(() => {
@@ -36,9 +33,6 @@ function AnimSection({ children, className = '' }: { children: ReactNode; classN
 }
 
 
-/* ─────────────────────────────────────────────
-   CODE BLOCK
-───────────────────────────────────────────── */
 function CodeBlock({ children }: { children: string }) {
   const [copied, setCopied] = useState(false)
   const copy = () => {
@@ -63,9 +57,6 @@ function InlineCode({ c }: { c: ReactNode }) {
 }
 
 
-/* ─────────────────────────────────────────────
-   SECTION HEADING
-───────────────────────────────────────────── */
 function SecH({ id, num, icon, title }: { id: string; num: number; icon: ReactNode; title: string }) {
   return (
     <h2 className="sec-heading" id={id}>
@@ -112,9 +103,6 @@ function EpLabel({ children }: { children: ReactNode }) {
 }
 
 
-/* ─────────────────────────────────────────────
-   PARAM TABLE
-───────────────────────────────────────────── */
 interface Param { name: string; type: string; required: 'yes' | 'no' | 'alt'; description: string; values?: string; default?: string }
 function ParamTable({ params, ext }: { params: Param[]; ext?: boolean }) {
   return (
@@ -149,9 +137,6 @@ function ParamTable({ params, ext }: { params: Param[]; ext?: boolean }) {
 }
 
 
-/* ─────────────────────────────────────────────
-   COLLAPSIBLE
-───────────────────────────────────────────── */
 function Coll({ title, children }: { title: string; children: ReactNode }) {
   return (
     <details className="coll">
@@ -162,9 +147,6 @@ function Coll({ title, children }: { title: string; children: ReactNode }) {
 }
 
 
-/* ─────────────────────────────────────────────
-   SIDEBAR NAV
-───────────────────────────────────────────── */
 const NAV = [
   { id: 's-base',    label: 'Base URL & Auth',   icon: <Globe size={15} />,         group: 'general' },
   { id: 's-groups',  label: 'All API Groups',     icon: <List size={15} />,          group: 'general' },
@@ -252,9 +234,6 @@ function Sidebar({ open, onClose }: { open: boolean; onClose: () => void }) {
 }
 
 
-/* ─────────────────────────────────────────────
-   TOPBAR
-───────────────────────────────────────────── */
 function Topbar({ onMenu }: { onMenu: () => void }) {
   const [scrolled, setScrolled] = useState(false)
   useEffect(() => {
@@ -281,7 +260,7 @@ function Topbar({ onMenu }: { onMenu: () => void }) {
           <Send size={13} />
           Telegram
         </a>
-        <a className="tb-btn primary" href="https://t.me/SiamBhau?text=I+want+to+buy+a+Premium+API+key" target="_blank" rel="noreferrer">
+        <a className="tb-btn primary" href="https://t.me/SiamBhau?text=https%3A%2F%2Fsiambhau69.eu.cc%0A%0AHi%20%40SiamBhau%20%F0%9F%91%8B,%20I%20want%20to%20BUY%20a%20Premium%20API%20key%20for%20the%20Free%20Fire%20Centralized%20API.%20Please%20share%20your%20available%20plans,%20pricing%20%26%20payment%20methods.%20%F0%9F%92%8E" target="_blank" rel="noreferrer">
           <Key size={13} />
           Get API Key
         </a>
@@ -294,9 +273,6 @@ function Topbar({ onMenu }: { onMenu: () => void }) {
 }
 
 
-/* ─────────────────────────────────────────────
-   API GROUPS OVERVIEW
-───────────────────────────────────────────── */
 const GROUPS = [
   { id: 's1',  icon: <Key size={15} />,       name: 'Access To JWT',  route: '/accesstojwt',   count: 2 },
   { id: 's2',  icon: <Shirt size={15} />,     name: 'Add Item',       route: '/additem',        count: 1 },
@@ -315,9 +291,6 @@ const GROUPS = [
 ]
 
 
-/* ─────────────────────────────────────────────
-   SECTION 1 — ACCESS TO JWT
-───────────────────────────────────────────── */
 function S1() {
   return (
     <AnimSection>
@@ -341,8 +314,7 @@ function S1() {
             { name: 'key',      type: 'string', required: 'yes', description: 'Your API Key' },
           ]} />
           <Coll title="View Success / Error Responses">
-            <CodeBlock>{`// Access-Token Method
-{
+            <CodeBlock>{`{
   "success": true,
   "region": "BD",
   "status": "1",
@@ -352,7 +324,6 @@ function S1() {
   "platform_type": 4
 }
 
-// UID+Password Method
 {
   "region": "BD",
   "status": "1",
@@ -361,10 +332,22 @@ function S1() {
   "uid": "4147917569"
 }
 
-// Errors
-{ "success": false, "error": "INVALID_TOKEN", "message": "AccessToken invalid." }
-{ "success": false, "error": "INVALID_PLATFORM", "message": "Account registered on another platform" }
-{ "uid": "4147917569", "error": "Failed to retrieve token" }`}</CodeBlock>
+{
+  "success": false,
+  "error": "INVALID_TOKEN",
+  "message": "AccessToken invalid."
+}
+
+{
+  "success": false,
+  "error": "INVALID_PLATFORM",
+  "message": "Account registered on another platform"
+}
+
+{
+  "uid": "4147917569",
+  "error": "Failed to retrieve token"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
 
@@ -378,12 +361,21 @@ GET /accesstojwt/get_jwt?guest_uid=UID&guest_password=PASSWORD&key=YOUR_KEY`}</C
             { name: 'key',            type: 'string', required: 'yes', description: 'Your API Key' },
           ]} />
           <Coll title="View Success / Error Responses">
-            <CodeBlock>{`// Success
-{ "success": true, "BearerAuth": "eyJhbGciOiJSUzI1NiIs..." }
+            <CodeBlock>{`{
+  "success": true,
+  "BearerAuth": "eyJhbGciOiJSUzI1NiIs..."
+}
 
-// Errors
-{ "success": false, "message": "unregistered or banned account.", "detail": "jwt not found" }
-{ "success": false, "message": "missing access_token (or guest_uid + guest_password)" }`}</CodeBlock>
+{
+  "success": false,
+  "message": "unregistered or banned account.",
+  "detail": "jwt not found"
+}
+
+{
+  "success": false,
+  "message": "missing access_token (or guest_uid + guest_password)"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
       </div>
@@ -392,9 +384,6 @@ GET /accesstojwt/get_jwt?guest_uid=UID&guest_password=PASSWORD&key=YOUR_KEY`}</C
 }
 
 
-/* ─────────────────────────────────────────────
-   SECTION 2 — ADD ITEM
-───────────────────────────────────────────── */
 function S2() {
   return (
     <AnimSection>
@@ -410,18 +399,32 @@ function S2() {
           { name: 'key',   type: 'string', required: 'yes', description: 'Your API Key' },
         ]} />
         <Coll title="View Success / Error Responses">
-          <CodeBlock>{`// Success
-{
+          <CodeBlock>{`{
   "status": "success",
   "message": "Items added successfully!",
   "items_count": 3,
-  "items": [211050001, 214050001, 208050001]
+  "items": [
+    211050001,
+    214050001,
+    208050001
+  ]
 }
 
-// Errors
-{ "status": "error", "message": "Missing 'items' parameter." }
-{ "status": "error", "message": "Missing 'jwt' parameter." }
-{ "status": "error", "message": "Invalid item IDs. Provide comma-separated numbers." }
+{
+  "status": "error",
+  "message": "Missing 'items' parameter."
+}
+
+{
+  "status": "error",
+  "message": "Missing 'jwt' parameter."
+}
+
+{
+  "status": "error",
+  "message": "Invalid item IDs. Provide comma-separated numbers."
+}
+
 {
   "status": "error",
   "message": "Failed to add items",
@@ -436,9 +439,6 @@ function S2() {
 }
 
 
-/* ─────────────────────────────────────────────
-   SECTION 3 — BAN CHECK
-───────────────────────────────────────────── */
 function S3() {
   return (
     <AnimSection>
@@ -453,15 +453,13 @@ function S3() {
             { name: 'key', type: 'string', required: 'yes', description: 'Your API Key' },
           ]} />
           <Coll title="View Success / Error Responses">
-            <CodeBlock>{`// Not Banned
-{
+            <CodeBlock>{`{
   "nickname": "SiamBhau",
   "region": "BD",
   "ban_status": "Not banned",
   "ban_period": null
 }
 
-// Temporary Ban
 {
   "nickname": "HackerXYZ",
   "region": "IND",
@@ -469,7 +467,6 @@ function S3() {
   "ban_period": "3 months"
 }
 
-// Permanent Ban
 {
   "nickname": "Cheater99",
   "region": "SG",
@@ -477,10 +474,17 @@ function S3() {
   "ban_period": null
 }
 
-// Errors
-{ "error": "ID NOT FOUND" }
-{ "error": "UID parameter is required" }
-{ "error": "Failed to retrieve ban status" }`}</CodeBlock>
+{
+  "error": "ID NOT FOUND"
+}
+
+{
+  "error": "UID parameter is required"
+}
+
+{
+  "error": "Failed to retrieve ban status"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
       </div>
@@ -489,9 +493,6 @@ function S3() {
 }
 
 
-/* ─────────────────────────────────────────────
-   SECTION 4 — BIND TOOLS
-───────────────────────────────────────────── */
 function S4() {
   return (
     <AnimSection>
@@ -507,14 +508,43 @@ function S4() {
             { name: 'key',          type: 'string', required: 'yes', description: 'Your API Key' },
           ]} />
           <Coll title="View Success Responses">
-            <CodeBlock>{`// Email Confirmed
-{ "status": "success", "data": { "current_email": "siamxus69@gmail.com", "pending_email": "", "countdown_seconds": 0 }, "summary": "Email confirmed: siamxus69@gmail.com" }
+            <CodeBlock>{`{
+  "status": "success",
+  "status_code": 200,
+  "data": {
+    "current_email": "siamxus69@gmail.com",
+    "pending_email": "",
+    "countdown_seconds": 0,
+    "countdown_human": "0",
+    "raw_response": {
+      "email": "siamxus69@gmail.com",
+      "email_to_be": "",
+      "request_exec_countdown": 0
+    }
+  },
+  "summary": "Email confirmed: siamxus69@gmail.com"
+}
 
-// Pending Confirmation
-{ "status": "success", "data": { "current_email": "", "pending_email": "newmail@gmail.com", "countdown_seconds": 86400, "countdown_human": "1 Day 0 Hour 0 Min 0 Sec" } }
+{
+  "status": "success",
+  "status_code": 200,
+  "data": {
+    "current_email": "",
+    "pending_email": "newmail@gmail.com",
+    "countdown_seconds": 86400,
+    "countdown_human": "1 Day 0 Hour 0 Min 0 Sec"
+  },
+  "summary": "Pending email confirmation: newmail@gmail.com - Confirms in: 1 Day 0 Hour 0 Min 0 Sec"
+}
 
-// No Email Set
-{ "status": "success", "data": { "current_email": "", "pending_email": "" }, "summary": "No recovery email set" }`}</CodeBlock>
+{
+  "status": "success",
+  "data": {
+    "current_email": "",
+    "pending_email": ""
+  },
+  "summary": "No recovery email set"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
 
@@ -534,31 +564,68 @@ function S4() {
             </table>
           </div>
           <Coll title="View Step Examples &amp; Responses">
-            <CodeBlock>{`// Step 1 — Send OTP to old email
-{ "access_token": "YOUR_TOKEN", "old_email": "old@gmail.com", "step": 1 }
+            <CodeBlock>{`{
+  "access_token": "YOUR_TOKEN",
+  "old_email": "old@gmail.com",
+  "step": 1
+}
 
-// Step 2 — Verify old OTP
-{ "access_token": "YOUR_TOKEN", "old_email": "old@gmail.com", "otp_old": "123456", "step": 2 }
+{
+  "access_token": "YOUR_TOKEN",
+  "old_email": "old@gmail.com",
+  "otp_old": "123456",
+  "step": 2
+}
 
-// Step 3 — Send OTP to new email
-{ "access_token": "YOUR_TOKEN", "new_email": "new@gmail.com", "step": 3 }
+{
+  "access_token": "YOUR_TOKEN",
+  "new_email": "new@gmail.com",
+  "step": 3
+}
 
-// Step 4 — Verify new OTP
-{ "access_token": "YOUR_TOKEN", "new_email": "new@gmail.com", "otp_new": "654321", "step": 4 }
+{
+  "access_token": "YOUR_TOKEN",
+  "new_email": "new@gmail.com",
+  "otp_new": "654321",
+  "step": 4
+}
 
-// Step 5 — Confirm change
-{ "access_token": "YOUR_TOKEN", "new_email": "new@gmail.com", "identity_token": "FROM_STEP_2", "verifier_token": "FROM_STEP_4", "step": 5 }
+{
+  "access_token": "YOUR_TOKEN",
+  "new_email": "new@gmail.com",
+  "identity_token": "FROM_STEP_2",
+  "verifier_token": "FROM_STEP_4",
+  "step": 5
+}
 
-// Step success (typical)
-{ "success": true, "step": 1, "message": "OTP sent to old@gmail.com", "next": "Call step 2 with otp_old" }
+{
+  "success": true,
+  "step": 1,
+  "message": "OTP sent to old@gmail.com",
+  "next": "Call step 2 with otp_old",
+  "raw": {}
+}
 
-// Step 5 final success
-{ "success": true, "step": 5, "message": "Email change request submitted successfully!" }
+{
+  "success": true,
+  "step": 5,
+  "message": "Email change request submitted successfully!"
+}
 
-// Errors
-{ "success": false, "error": "access_token is required" }
-{ "success": false, "error": "step is required (1-5)" }
-{ "success": false, "error": "old_email and otp_old required for step 2" }`}</CodeBlock>
+{
+  "success": false,
+  "error": "access_token is required"
+}
+
+{
+  "success": false,
+  "error": "step is required (1-5)"
+}
+
+{
+  "success": false,
+  "error": "old_email and otp_old required for step 2"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
 
@@ -575,21 +642,40 @@ function S4() {
             </table>
           </div>
           <Coll title="View Step Examples &amp; Responses">
-            <CodeBlock>{`// Step 1
-{ "access_token": "YOUR_TOKEN", "email": "bound@gmail.com", "step": 1 }
+            <CodeBlock>{`{
+  "access_token": "YOUR_TOKEN",
+  "email": "bound@gmail.com",
+  "step": 1
+}
 
-// Step 2
-{ "access_token": "YOUR_TOKEN", "email": "bound@gmail.com", "otp": "123456", "step": 2 }
+{
+  "access_token": "YOUR_TOKEN",
+  "email": "bound@gmail.com",
+  "otp": "123456",
+  "step": 2
+}
 
-// Step 3
-{ "access_token": "YOUR_TOKEN", "identity_token": "FROM_STEP_2", "step": 3 }
+{
+  "access_token": "YOUR_TOKEN",
+  "identity_token": "FROM_STEP_2",
+  "step": 3
+}
 
-// Final success
-{ "success": true, "step": 3, "message": "Unbind request created successfully!" }
+{
+  "success": true,
+  "step": 3,
+  "message": "Unbind request created successfully!"
+}
 
-// Errors
-{ "success": false, "error": "step must be 1 to 3" }
-{ "success": false, "error": "email and otp required for step 2" }`}</CodeBlock>
+{
+  "success": false,
+  "error": "step must be 1 to 3"
+}
+
+{
+  "success": false,
+  "error": "email and otp required for step 2"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
 
@@ -598,17 +684,28 @@ function S4() {
 Content-Type: application/json
 ?key=YOUR_KEY
 
-{ "access_token": "YOUR_TOKEN" }`}</CodeBlock>
+{
+  "access_token": "YOUR_TOKEN"
+}`}</CodeBlock>
           <ParamTable params={[
             { name: 'access_token', type: 'string', required: 'yes', description: 'Garena Access Token' },
           ]} />
           <Coll title="View Success / Error Responses">
-            <CodeBlock>{`// Success
-{ "success": true, "message": "Bind cancelled successfully!", "raw": {...} }
+            <CodeBlock>{`{
+  "success": true,
+  "message": "Bind cancelled successfully!",
+  "raw": {}
+}
 
-// Errors
-{ "success": false, "error": "access_token is required" }
-{ "success": false, "message": "Cancel failed" }`}</CodeBlock>
+{
+  "success": false,
+  "error": "access_token is required"
+}
+
+{
+  "success": false,
+  "message": "Cancel failed"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
       </div>
@@ -617,9 +714,6 @@ Content-Type: application/json
 }
 
 
-/* ─────────────────────────────────────────────
-   SECTION 5 — BANNER
-───────────────────────────────────────────── */
 function S5() {
   return (
     <AnimSection>
@@ -635,18 +729,23 @@ function S5() {
             { name: 'key',    type: 'string', required: 'yes', values: '—', default: '—',  description: 'Your API Key' },
           ]} />
           <Coll title="View Success / Error Responses">
-            <CodeBlock>{`// Success — Image Response
-HTTP 200 OK
+            <CodeBlock>{`HTTP 200 OK
 Content-Type: image/png
 Cache-Control: public, max-age=300
 
 [PNG Binary Image — Player Banner with Avatar + Name + Guild + Level]
-// Returns a direct PNG. Use as: <img src="API_URL" />
 
-// Errors
-{ "error": "UID required" }
-{ "error": "Info API Error: 500" }
-{ "error": "Failed to generate banner" }`}</CodeBlock>
+{
+  "error": "UID required"
+}
+
+{
+  "error": "Info API Error: 500"
+}
+
+{
+  "error": "Failed to generate banner"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
       </div>
@@ -655,9 +754,6 @@ Cache-Control: public, max-age=300
 }
 
 
-/* ─────────────────────────────────────────────
-   SECTION 6 — EAT TO JWT
-───────────────────────────────────────────── */
 function S6() {
   return (
     <AnimSection>
@@ -672,8 +768,7 @@ function S6() {
             { name: 'key',       type: 'string', required: 'yes', description: 'Your API Key' },
           ]} />
           <Coll title="View Success / Error Responses">
-            <CodeBlock>{`// Success
-{
+            <CodeBlock>{`{
   "status": "success",
   "account_id": "2579249340",
   "account_nickname": "SiamBhau",
@@ -682,10 +777,17 @@ function S6() {
   "region": "BD"
 }
 
-// Errors
-{ "error": "Invalid access token or session expired" }
-{ "error": "eat_token parameter is required" }
-{ "error": "Failed to extract data from Garena" }`}</CodeBlock>
+{
+  "error": "Invalid access token or session expired"
+}
+
+{
+  "error": "eat_token parameter is required"
+}
+
+{
+  "error": "Failed to extract data from Garena"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
       </div>
@@ -694,9 +796,6 @@ function S6() {
 }
 
 
-/* ─────────────────────────────────────────────
-   SECTION 7 — FREE FIRE INFO
-───────────────────────────────────────────── */
 function S7() {
   return (
     <AnimSection>
@@ -716,37 +815,149 @@ function S7() {
             <CodeBlock>{`{
   "basicInfo": {
     "accountId": "2579249340",
+    "accountType": 1,
     "nickname": "SiamBhau⸙",
     "region": "BD",
     "level": 68,
     "exp": 2464867,
+    "bannerId": 901000011,
+    "headPic": 902028017,
     "rank": 318,
     "rankingPoints": 3097,
-    "liked": 61695,
+    "badgeCnt": 8,
+    "badgeId": 1001000096,
     "seasonId": 51,
+    "liked": 61695,
+    "lastLoginAt": "1777636197",
     "csRank": 322,
-    "releaseVersion": "OB53"
+    "csRankingPoints": 117,
+    "weaponSkinShows": [
+      907193902,
+      912037001
+    ],
+    "pinId": 910000009,
+    "maxRank": 318,
+    "csMaxRank": 322,
+    "accountPrefers": {},
+    "createAt": "1606659627",
+    "title": 904090025,
+    "externalIconInfo": {
+      "status": "ExternalIconStatus_NOT_IN_USE",
+      "showType": "ExternalIconShowType_FRIEND"
+    },
+    "releaseVersion": "OB53",
+    "showBrRank": true,
+    "showCsRank": true,
+    "socialHighLightsWithBasicInfo": {},
+    "primeInfo": {
+      "primeLevel": 8
+    }
+  },
+  "profileInfo": {
+    "avatarId": 102000022,
+    "skinColor": 50,
+    "clothes": [
+      205000051,
+      211000579,
+      214000022,
+      211001035,
+      203001159,
+      204000581
+    ],
+    "equipedSkills": [
+      16, 3406, 8, 1,
+      16, 1806, 8, 2,
+      16, 4306, 8, 3,
+      16, 706
+    ],
+    "isSelected": true,
+    "isSelectedAwaken": true,
+    "unlockType": "UnlockType_LINK",
+    "unlockTime": 1650796023,
+    "isMarkedStar": true
   },
   "clanBasicInfo": {
     "clanId": "3048889605",
     "clanName": "Jᴜɴɪᴏʀ.Exper",
+    "captainId": "6201276150",
     "clanLevel": 1,
     "capacity": 45,
     "memberNum": 32
   },
-  "petInfo": { "id": 1300000126, "level": 4, "exp": 541, "isSelected": true },
+  "captainBasicInfo": {
+    "accountId": "6201276150",
+    "accountType": 1,
+    "nickname": "সিয়ামভাই10k",
+    "region": "BD",
+    "level": 34,
+    "exp": 68014,
+    "bannerId": 901041021,
+    "headPic": 902041014,
+    "rank": 301,
+    "rankingPoints": 1000,
+    "badgeId": 1001000096,
+    "seasonId": 51,
+    "liked": 14028,
+    "lastLoginAt": "1772468427",
+    "csRank": 301,
+    "weaponSkinShows": [
+      907102812
+    ],
+    "pinId": 910040001,
+    "maxRank": 301,
+    "csMaxRank": 301,
+    "accountPrefers": {},
+    "createAt": "1651754222",
+    "title": 904090015,
+    "externalIconInfo": {
+      "status": "ExternalIconStatus_NOT_IN_USE",
+      "showType": "ExternalIconShowType_FRIEND"
+    },
+    "releaseVersion": "OB52",
+    "socialHighLightsWithBasicInfo": {},
+    "primeInfo": {}
+  },
+  "petInfo": {
+    "id": 1300000126,
+    "level": 4,
+    "exp": 541,
+    "isSelected": true,
+    "skinId": 1310000262,
+    "selectedSkillId": 1315000001,
+    "isMarkedStar": true
+  },
   "socialInfo": {
+    "accountId": "2579249340",
     "gender": "Gender_MALE",
     "language": "Language_EN",
-    "signature": "[b][c][FFFFFF] New Player Gonab :("
+    "signature": "[b][c][FFFFFF] New Player Gonab :(",
+    "rankShow": "RankShow_BR"
   },
-  "Owner": { "Owner": "SiamBhau", "Telegram": "t.me/SiamBhau" }
+  "diamondCostRes": {
+    "diamondCost": 390
+  },
+  "creditScoreInfo": {
+    "creditScore": 100,
+    "rewardState": "REWARD_STATE_UNCLAIMED",
+    "periodicSummaryEndTime": "1777586454"
+  },
+  "Owner": {
+    "Owner": "SiamBhau",
+    "Telegram": "t.me/SiamBhau"
+  }
 }
 
-// Errors
-{ "error": "Invalid UID or Region. Please check and try again." }
-{ "error": "Please provide UID." }
-{ "error": "Please provide REGION." }`}</CodeBlock>
+{
+  "error": "Invalid UID or Region. Please check and try again."
+}
+
+{
+  "error": "Please provide UID."
+}
+
+{
+  "error": "Please provide REGION."
+}`}</CodeBlock>
           </Coll>
         </EpCard>
 
@@ -762,16 +973,43 @@ GET /freefireinfo/stats?uid=2579249340&region=BD&gamemode=cs&matchmode=RANKED&ke
             { name: 'key',       type: 'string', required: 'yes', values: '—',                     default: '—',      description: 'Your API Key' },
           ]} />
           <Coll title="View BR / CS Stats Responses">
-            <CodeBlock>{`// BR Career
-{
-  "success": true, "uid": "2579249340", "region": "BD", "gamemode": "br", "matchmode": "CAREER",
-  "stats": { "rankingPoints": 4200, "rank": 220, "kills": 15800, "headshots": 6200, "winRate": 28, "gamesPlayed": 5200, "wins": 1456, "top10": 2800, "kd": 4.21, "longestKill": 423 }
+            <CodeBlock>{`{
+  "success": true,
+  "uid": "2579249340",
+  "region": "BD",
+  "gamemode": "br",
+  "matchmode": "CAREER",
+  "stats": {
+    "rankingPoints": 4200,
+    "rank": 220,
+    "kills": 15800,
+    "headshots": 6200,
+    "winRate": 28,
+    "gamesPlayed": 5200,
+    "wins": 1456,
+    "top10": 2800,
+    "kd": 4.21,
+    "longestKill": 423
+  }
 }
 
-// CS Ranked
 {
-  "success": true, "uid": "2579249340", "region": "BD", "gamemode": "cs", "matchmode": "RANKED",
-  "stats": { "rankingPoints": 3100, "cs_rank": 605, "kills": 8700, "headshots": 3900, "winRate": 58, "gamesPlayed": 1800, "wins": 1044, "kd": 3.87, "mvp": 420 }
+  "success": true,
+  "uid": "2579249340",
+  "region": "BD",
+  "gamemode": "cs",
+  "matchmode": "RANKED",
+  "stats": {
+    "rankingPoints": 3100,
+    "cs_rank": 605,
+    "kills": 8700,
+    "headshots": 3900,
+    "winRate": 58,
+    "gamesPlayed": 1800,
+    "wins": 1044,
+    "kd": 3.87,
+    "mvp": 420
+  }
 }`}</CodeBlock>
           </Coll>
         </EpCard>
@@ -781,9 +1019,6 @@ GET /freefireinfo/stats?uid=2579249340&region=BD&gamemode=cs&matchmode=RANKED&ke
 }
 
 
-/* ─────────────────────────────────────────────
-   SECTION 8 — FRIENDS
-───────────────────────────────────────────── */
 function S8() {
   return (
     <AnimSection>
@@ -802,11 +1037,28 @@ GET /friends/friend_action?jwt=YOUR_JWT&uid=TARGET_UID&action=remove&key=YOUR_KE
             { name: 'key',    type: 'string', required: 'yes', description: 'Your API Key' },
           ]} />
           <Coll title="View Responses">
-            <CodeBlock>{`{ "message": "Friend Request Sent Successfully", "response_status": 200 }
-{ "message": "Friend Removed Successfully", "response_status": 200 }
-{ "message": "Action Failed: ALREADY_FRIEND", "response_status": 400 }
-{ "message": "Invalid action. Use 'add' or 'remove'." }
-{ "message": "JWT token is required as '?jwt=YOUR_TOKEN'" }`}</CodeBlock>
+            <CodeBlock>{`{
+  "message": "Friend Request Sent Successfully",
+  "response_status": 200
+}
+
+{
+  "message": "Friend Removed Successfully",
+  "response_status": 200
+}
+
+{
+  "message": "Action Failed: ALREADY_FRIEND",
+  "response_status": 400
+}
+
+{
+  "message": "Invalid action. Use 'add' or 'remove'."
+}
+
+{
+  "message": "JWT token is required as '?jwt=YOUR_TOKEN'"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
 
@@ -817,12 +1069,36 @@ GET /friends/friend_action?jwt=YOUR_JWT&uid=TARGET_UID&action=remove&key=YOUR_KE
             { name: 'key', type: 'string', required: 'yes', description: 'Your API Key (with friendslist access)' },
           ]} />
           <Coll title="View Responses">
-            <CodeBlock>{`// Success
-{ "success": true, "friends_count": 5, "friends_list": [{ "nickname": "ProGamer01", "user_id": "1234567890" }, { "nickname": "SnipeKing", "user_id": "9876543210" }] }
+            <CodeBlock>{`{
+  "success": true,
+  "friends_count": 5,
+  "friends_list": [
+    {
+      "nickname": "ProGamer01",
+      "user_id": "1234567890"
+    },
+    {
+      "nickname": "SnipeKing",
+      "user_id": "9876543210"
+    },
+    {
+      "nickname": "RushPlayer",
+      "user_id": "4567891230"
+    }
+  ]
+}
 
-// Errors
-{ "success": false, "error": "jwt parameter is required" }
-{ "success": false, "error": "Connection timeout", "friends_count": 0, "friends_list": [] }`}</CodeBlock>
+{
+  "success": false,
+  "error": "jwt parameter is required"
+}
+
+{
+  "success": false,
+  "error": "Connection timeout",
+  "friends_count": 0,
+  "friends_list": []
+}`}</CodeBlock>
           </Coll>
         </EpCard>
 
@@ -834,10 +1110,29 @@ GET /friends/friend_action?jwt=YOUR_JWT&uid=TARGET_UID&action=remove&key=YOUR_KE
             { name: 'key', type: 'string', required: 'yes', description: 'Your API Key' },
           ]} />
           <Coll title="View Responses">
-            <CodeBlock>{`{ "status": "success", "message": "UID 1234567890 successfully starred ⭐", "response_hex": "0a..." }
-{ "error": "jwt parameter is required" }
-{ "error": "uid parameter is required and must be a number" }
-{ "error": "FF server returned 401" }`}</CodeBlock>
+            <CodeBlock>{`{
+  "status": "success",
+  "message": "UID 1234567890 successfully starred ⭐",
+  "response_hex": "0a..."
+}
+
+{
+  "error": "jwt parameter is required"
+}
+
+{
+  "error": "uid parameter is required and must be a number"
+}
+
+{
+  "error": "Invalid JWT: ...",
+  "uid": 1234567890,
+  "region": "BD"
+}
+
+{
+  "error": "FF server returned 401"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
 
@@ -849,7 +1144,10 @@ GET /friends/friend_action?jwt=YOUR_JWT&uid=TARGET_UID&action=remove&key=YOUR_KE
             { name: 'key', type: 'string', required: 'yes', description: 'Your API Key' },
           ]} />
           <Coll title="View Response">
-            <CodeBlock>{`{ "status": "success", "message": "UID 1234567890 successfully unstarred ✅" }`}</CodeBlock>
+            <CodeBlock>{`{
+  "status": "success",
+  "message": "UID 1234567890 successfully unstarred ✅"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
 
@@ -862,9 +1160,18 @@ GET /friends/friend_action?jwt=YOUR_JWT&uid=TARGET_UID&action=remove&key=YOUR_KE
             { name: 'key',   type: 'string', required: 'yes', description: 'Your API Key' },
           ]} />
           <Coll title="View Responses">
-            <CodeBlock>{`{ "status": "success", "message": "Alias 'BestBro' set for UID 1234567890 ✅" }
-{ "error": "alias parameter is required" }
-{ "error": "Alias too long! Max 12 characters (got 18)" }`}</CodeBlock>
+            <CodeBlock>{`{
+  "status": "success",
+  "message": "Alias 'BestBro' set for UID 1234567890 ✅"
+}
+
+{
+  "error": "alias parameter is required"
+}
+
+{
+  "error": "Alias too long! Max 12 characters (got 18)"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
 
@@ -876,7 +1183,10 @@ GET /friends/friend_action?jwt=YOUR_JWT&uid=TARGET_UID&action=remove&key=YOUR_KE
             { name: 'key', type: 'string', required: 'yes', description: 'Your API Key' },
           ]} />
           <Coll title="View Response">
-            <CodeBlock>{`{ "status": "success", "message": "Alias removed for UID 1234567890 ✅" }`}</CodeBlock>
+            <CodeBlock>{`{
+  "status": "success",
+  "message": "Alias removed for UID 1234567890 ✅"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
       </div>
@@ -885,9 +1195,6 @@ GET /friends/friend_action?jwt=YOUR_JWT&uid=TARGET_UID&action=remove&key=YOUR_KE
 }
 
 
-/* ─────────────────────────────────────────────
-   SECTION 9 — GUILD
-───────────────────────────────────────────── */
 function S9() {
   return (
     <AnimSection>
@@ -908,18 +1215,46 @@ function S9() {
   "clan_name": "BhauGuild",
   "level": 5,
   "region": "BD",
+  "welcome_message": "Welcome to BhauGuild! Only pro players allowed.",
   "score": 98500,
-  "guild_details": { "members_online": 8, "total_members": 30 }
+  "rank": 12,
+  "xp": 850000,
+  "balance": 50000,
+  "energy": 100,
+  "upgrades": 15,
+  "achievements": 8,
+  "total_playtime": 9820000,
+  "guild_details": {
+    "region": "BD",
+    "clan_id": 3048889605,
+    "members_online": 8,
+    "total_members": 30,
+    "reward_time": 1750000000,
+    "expire_time": 1752000000
+  }
 }
 
-// Errors
-{ "error": "clan_id parameter is required" }
-{ "error": "Invalid or non-existent clan ID" }`}</CodeBlock>
+{
+  "error": "clan_id parameter is required"
+}
+
+{
+  "error": "Invalid clan_id"
+}
+
+{
+  "error": "JWT token generation failed"
+}
+
+{
+  "error": "FF server error: 500"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
 
         <EpCard method="GET" path="/guild/join" title="Join a Guild">
-          <CodeBlock>{`GET /guild/join?clan_id=3048889605&jwt=YOUR_JWT&key=YOUR_KEY`}</CodeBlock>
+          <CodeBlock>{`GET /guild/join?clan_id=3048889605&jwt=YOUR_JWT&key=YOUR_KEY
+GET /guild/join?clan_id=3048889605&uid=YOUR_UID&pass=YOUR_PASSWORD&key=YOUR_KEY`}</CodeBlock>
           <ParamTable params={[
             { name: 'clan_id',  type: 'string', required: 'yes', description: 'Target Guild/Clan ID' },
             { name: 'jwt',      type: 'string', required: 'alt', description: 'Your JWT (preferred auth)' },
@@ -927,9 +1262,26 @@ function S9() {
             { name: 'key',      type: 'string', required: 'yes', description: 'Your API Key' },
           ]} />
           <Coll title="View Response">
-            <CodeBlock>{`{ "success": true, "action": "Join Guild", "clan_id": "3048889605", "uid": "2579249340" }
-{ "error": "clan_id parameter is required" }
-{ "error": "JWT or UID+pass required" }`}</CodeBlock>
+            <CodeBlock>{`{
+  "success": true,
+  "action": "Join Guild",
+  "clan_id": "3048889605",
+  "uid": "2579249340",
+  "name": "SiamBhau",
+  "region": "BD",
+  "login_method": "jwt",
+  "server_response": ""
+}
+
+{
+  "success": false,
+  "error": "clan_id required"
+}
+
+{
+  "success": false,
+  "error": "Provide jwt OR (uid + pass)"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
 
@@ -943,8 +1295,19 @@ function S9() {
             { name: 'key',     type: 'string', required: 'yes', description: 'Your API Key' },
           ]} />
           <Coll title="View Response">
-            <CodeBlock>{`{ "success": true, "action": "Leave Guild", "clan_id": "3048889605", "uid": "2579249340" }
-{ "error": "clan_id parameter is required" }`}</CodeBlock>
+            <CodeBlock>{`{
+  "success": true,
+  "action": "Leave Guild",
+  "clan_id": "3048889605",
+  "uid": "2579249340",
+  "region": "BD",
+  "login_method": "jwt"
+}
+
+{
+  "success": false,
+  "error": "clan_id parameter is required"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
 
@@ -963,22 +1326,45 @@ Content-Type: application/json
   "min_level": 20
 }`}</CodeBlock>
           <ParamTable params={[
-            { name: 'guild_name',    type: 'string',    required: 'yes', description: 'New guild name' },
-            { name: 'slogan',        type: 'string',    required: 'yes', description: 'Guild slogan/description' },
-            { name: 'payment',       type: 'int',       required: 'yes', description: '1 = Free, 2 = Paid' },
-            { name: 'auto_approval', type: 'int',       required: 'yes', description: '1 = Auto, 2 = Manual' },
-            { name: 'avatar',        type: 'int',       required: 'yes', description: 'Avatar skin ID' },
-            { name: 'tags',          type: 'int[]',     required: 'yes', description: 'Array of tag IDs (must include 13 or 14)' },
-            { name: 'min_level',     type: 'int',       required: 'yes', description: 'Minimum player level to join' },
+            { name: 'guild_name',    type: 'string',  required: 'yes', description: 'Guild display name' },
+            { name: 'slogan',        type: 'string',  required: 'yes', description: 'Short slogan / tagline' },
+            { name: 'payment',       type: 'integer', required: 'yes', description: '1 (Coins) / 2 (Diamonds)' },
+            { name: 'auto_approval', type: 'integer', required: 'yes', description: '1 (OFF) / 2 (ON)' },
+            { name: 'avatar',        type: 'integer', required: 'yes', description: '10 (Lion) / 11 (Wolf)' },
+            { name: 'tags',          type: 'int[]',   required: 'yes', description: 'Tag IDs 1–14, must include 13 or 14' },
+            { name: 'min_level',     type: 'integer', required: 'no',  description: 'Minimum player level' },
+            { name: 'min_br_rank',   type: 'integer', required: 'no',  description: 'Minimum BR rank' },
+            { name: 'min_cs_rank',   type: 'integer', required: 'no',  description: 'Minimum CS rank' },
+            { name: 'location',      type: 'integer', required: 'no',  description: 'Region code (default 59999)' },
           ]} />
           <Coll title="View Success / Error Responses">
-            <CodeBlock>{`// Success
-{ "status": "success", "message": "Guild 'MyGuild' created successfully!", "guild_id": 3055551234 }
+            <CodeBlock>{`{
+  "status": "success",
+  "message": "Guild 'MyGuild' created successfully!",
+  "guild_id": 3055551234,
+  "guild_name": "MyGuild",
+  "region": "BD"
+}
 
-// Errors
-{ "error": "tags must include 13 (Casual) or 14 (Competition)" }
-{ "error": "guild_name is required" }
-{ "error": "Authorization header with Bearer JWT required" }`}</CodeBlock>
+{
+  "error": "Authorization header required. Format: Bearer <jwt_token>"
+}
+
+{
+  "error": "guild_name is required"
+}
+
+{
+  "error": "payment must be 1 (Coins) or 2 (Diamonds)"
+}
+
+{
+  "error": "tags must include 13 (Casual) or 14 (Competition)"
+}
+
+{
+  "error": "Only one activity tag (1/2/3) allowed, got: [1, 2]"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
       </div>
@@ -987,16 +1373,13 @@ Content-Type: application/json
 }
 
 
-/* ─────────────────────────────────────────────
-   SECTION 10 — JWT DECODE
-───────────────────────────────────────────── */
 function S10() {
   return (
     <AnimSection>
       <div className="sec-wrap" id="s10">
         <SecH id="s10" num={10} icon={<Unlock size={18} />} title="JWT Decode" />
         <SecBadges group="/jwttokendecode" count={1} color="#7c3aed" />
-        <div className="desc-block">Decodes a Free Fire JWT Bearer Token and exposes the full payload including account info and expiry.</div>
+        <div className="desc-block">Decodes a Free Fire JWT Bearer Token and exposes the full payload.</div>
         <EpCard method="GET" path="/jwttokendecode/decode" title="Decode JWT Token">
           <CodeBlock>{`GET /jwttokendecode/decode?token=YOUR_JWT_TOKEN&key=YOUR_KEY`}</CodeBlock>
           <ParamTable params={[
@@ -1004,23 +1387,35 @@ function S10() {
             { name: 'key',   type: 'string', required: 'yes', description: 'Your API Key' },
           ]} />
           <Coll title="View Success / Error Responses">
-            <CodeBlock>{`// Success
-{
+            <CodeBlock>{`{
   "status": "success",
   "decoded": {
     "account_id": "2579249340",
     "nickname": "SiamBhau",
     "lock_region": "BD",
+    "open_id": "abc123def456",
+    "platform_type": 4,
+    "iat": 1748000000,
     "exp": "2026-05-29 13:11:47 UTC",
-    "iss": "freefire-game-server"
+    "iss": "freefire-game-server",
+    "sub": "game-auth"
   }
 }
 
-// Error — Missing Token
-{ "status": "error", "message": "Missing token parameter" }
+{
+  "status": "error",
+  "message": "Missing token parameter"
+}
 
-// Error — Expired Token
-{ "status": "error", "message": "Token has expired" }`}</CodeBlock>
+{
+  "status": "error",
+  "message": "Invalid JWT token"
+}
+
+{
+  "status": "error",
+  "message": "Token has expired"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
       </div>
@@ -1029,9 +1424,6 @@ function S10() {
 }
 
 
-/* ─────────────────────────────────────────────
-   SECTION 11 — LONG BIO
-───────────────────────────────────────────── */
 function S11() {
   return (
     <AnimSection>
@@ -1054,14 +1446,50 @@ function S11() {
             { name: 'key',      type: 'string', required: 'yes', description: 'Your API Key' },
           ]} />
           <Coll title="View Success / Error Responses">
-            <CodeBlock>{`// Success
-{ "Owner": "SiamBhau", "status": "Success", "login_method": "Direct JWT", "code": 200 }
+            <CodeBlock>{`{
+  "Owner": "SiamBhau",
+  "status": "Success",
+  "login_method": "Direct JWT",
+  "code": 200,
+  "bio": "FF Pro Player SiamBhau",
+  "uid": "2579249340",
+  "name": "SiamBhau",
+  "region": "BD",
+  "generated_jwt": "eyJ..."
+}
 
-// Error — Missing Bio
-{ "status": "Error", "code": 400, "error": "Missing 'bio' parameter" }
+{
+  "Owner": "SiamBhau",
+  "status": "Success",
+  "login_method": "UID/Pass Login",
+  "code": 200,
+  "bio": "FF Pro Player SiamBhau",
+  "uid": "2579249340",
+  "name": "SiamBhau",
+  "region": "BD"
+}
 
-// Error — Unauthorized
-{ "status": "Unauthorized (Invalid JWT)", "code": 401 }`}</CodeBlock>
+{
+  "status": "Error",
+  "code": 400,
+  "error": "Missing 'bio' parameter"
+}
+
+{
+  "status": "Error",
+  "code": 400,
+  "error": "Provide JWT, or UID/Pass, or Access Token"
+}
+
+{
+  "status": "Unauthorized (Invalid JWT)",
+  "code": 401
+}
+
+{
+  "status": "Guest Login Failed (Check UID/Pass)",
+  "code": 401
+}`}</CodeBlock>
           </Coll>
         </EpCard>
       </div>
@@ -1070,9 +1498,6 @@ function S11() {
 }
 
 
-/* ─────────────────────────────────────────────
-   SECTION 12 — NAME CHANGER
-───────────────────────────────────────────── */
 function S12() {
   return (
     <AnimSection>
@@ -1088,14 +1513,23 @@ function S12() {
             { name: 'key',   type: 'string', required: 'yes', description: 'Your API Key' },
           ]} />
           <Coll title="View Success / Error Responses">
-            <CodeBlock>{`// Success
-{ "Owner": "SiamBhau", "status": "success", "raw_content": "0a020801" }
+            <CodeBlock>{`{
+  "Owner": "SiamBhau",
+  "status": "success",
+  "raw_content": "0a020801",
+  "text": ""
+}
 
-// Error — Name Already Used
-{ "Owner": "SiamBhau", "status": "failed", "text": "BR_NAME_ALREADY_USED" }
+{
+  "Owner": "SiamBhau",
+  "status": "failed",
+  "raw_content": "...",
+  "text": "BR_NAME_ALREADY_USED"
+}
 
-// Error — Missing Parameters
-{ "error": "token and name are required" }`}</CodeBlock>
+{
+  "error": "token and name are required"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
       </div>
@@ -1104,9 +1538,6 @@ function S12() {
 }
 
 
-/* ─────────────────────────────────────────────
-   SECTION 13 — OUTFITS
-───────────────────────────────────────────── */
 function S13() {
   return (
     <AnimSection>
@@ -1122,16 +1553,19 @@ function S13() {
             { name: 'key',    type: 'string', required: 'yes', values: '—', default: '—',  description: 'Your API Key' },
           ]} />
           <Coll title="View Success / Error Responses">
-            <CodeBlock>{`// Success — Image Response
-HTTP 200 OK  |  Content-Type: image/png
-[PNG Binary — 1024x1024px outfit render]
-// Direct image URL — use as: <img src="API_URL" />
+            <CodeBlock>{`HTTP 200 OK
+Content-Type: image/png
 
-// Error — Missing UID
-{ "error": "uid parameter is required" }
+[PNG Binary Image — 1024x1024px]
+Outfit slots: Head, Body, Legs, Shoes, Backpack, Mask, Arm + Character + Weapon skin
 
-// Error — Fetch Failed
-{ "error": "Failed to fetch player info" }`}</CodeBlock>
+{
+  "error": "uid parameter is required"
+}
+
+{
+  "error": "Failed to fetch player info"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
       </div>
@@ -1140,9 +1574,6 @@ HTTP 200 OK  |  Content-Type: image/png
 }
 
 
-/* ─────────────────────────────────────────────
-   SECTION 14 — CRAFTLANDS
-───────────────────────────────────────────── */
 function S14() {
   return (
     <AnimSection>
@@ -1160,12 +1591,66 @@ function S14() {
             { name: 'key',      type: 'string', required: 'yes', values: '—', default: '—',  description: 'Your API Key' },
           ]} />
           <Coll title="View Response">
-            <CodeBlock>{`// Success
-{ "code": 0, "status": "success", "data": { "map_info": { "workshop_code": "#ABC123", "author_name": "MapMaker01", "map_name": "Sniper Arena", "like_count": 8420 } } }
+            <CodeBlock>{`{
+  "code": 0,
+  "status": "success",
+  "msg": "",
+  "data": {
+    "map_info": {
+      "workshop_code": "#ABC123",
+      "author_name": "MapMaker01",
+      "map_name": "Sniper Arena",
+      "description": "Best 1v1 sniper map for Free Fire",
+      "team_count": 2,
+      "game_mode": 12,
+      "subscribe_count": 15890,
+      "like_count": 8420,
+      "estimated_play_time": "300 seconds",
+      "tags": [1, 4, 13]
+    },
+    "game_info": {
+      "title": "Free Fire Craftland",
+      "game_name": "Free Fire",
+      "region": "BD",
+      "language": "en",
+      "android_download": "https://play.google.com/store/apps/details?id=com.dts.freefireth",
+      "ios_download": "https://apps.apple.com/app/garena-free-fire/id1300146617",
+      "ugc_url": "https://ff.garena.com/craftland"
+    },
+    "images": {
+      "backgrounds": [],
+      "game_icon": "...",
+      "share_image": "..."
+    },
+    "timestamps": {
+      "start_time": 1750000000,
+      "end_time": 1755000000,
+      "start_time_formatted": "2025-06-15 12:30:00",
+      "end_time_formatted": "2025-08-12 12:30:00"
+    }
+  }
+}
 
-// Errors
-{ "error": "map_code is required" }
-{ "error": "API returned status 404" }`}</CodeBlock>
+{
+  "code": 400,
+  "status": "error",
+  "msg": "map_code is required",
+  "data": null
+}
+
+{
+  "code": 503,
+  "status": "error",
+  "msg": "Network error: ...",
+  "data": null
+}
+
+{
+  "code": 500,
+  "status": "error",
+  "msg": "Server error: ...",
+  "data": null
+}`}</CodeBlock>
           </Coll>
         </EpCard>
 
@@ -1179,21 +1664,77 @@ function S14() {
             { name: 'key',      type: 'string', required: 'yes', values: '—', default: '—',  description: 'Your API Key' },
           ]} />
           <Coll title="View Success / Error Responses">
-            <CodeBlock>{`// Full Details — Success
-{
+            <CodeBlock>{`{
   "code": 0,
   "status": "success",
   "data": {
-    "basic_info": { "map_name": "Sniper Arena", "author": "MapMaker01" },
-    "gameplay_info": { "game_mode": { "id": 12, "name": "Sniper Only" } },
-    "tags": [{ "id": 1, "name": "Action" }, { "id": 4, "name": "PvP" }],
-    "social_info": { "subscribe_count": 15890, "like_count": 8420 }
+    "basic_info": {
+      "workshop_code": "#ABC123",
+      "map_name": "Sniper Arena",
+      "author": "MapMaker01",
+      "description": "Best 1v1 sniper map for Free Fire",
+      "short_description": "Sniper 1v1"
+    },
+    "gameplay_info": {
+      "team_count": 2,
+      "group_mode": 1,
+      "game_mode": {
+        "id": 12,
+        "name": "Sniper Only"
+      },
+      "mode_template": {
+        "id": 5,
+        "name": "Free For All"
+      },
+      "round_count": 3,
+      "map_id": 901,
+      "estimated_play_time": "300 - 600 seconds"
+    },
+    "social_info": {
+      "subscribe_count": 15890,
+      "like_count": 8420,
+      "map_cover_url": "https://..."
+    },
+    "tags": [
+      {
+        "id": 1,
+        "key": "tag_action",
+        "name": "Action",
+        "type": 1
+      },
+      {
+        "id": 4,
+        "key": "tag_pvp",
+        "name": "PvP",
+        "type": 2
+      },
+      {
+        "id": 13,
+        "key": "tag_casual",
+        "name": "Casual",
+        "type": 3
+      }
+    ],
+    "download_info": {
+      "android": "https://play.google.com/store/apps/details?id=com.dts.freefireth",
+      "ios": "https://apps.apple.com/app/garena-free-fire/id1300146617",
+      "ugc_portal": "https://ff.garena.com/craftland"
+    },
+    "region_info": {
+      "region": "BD",
+      "language": "en",
+      "region_lang": "en_BD"
+    }
   }
 }
 
-// Errors
-{ "error": "map_code is required" }
-{ "error": "API returned status 404" }`}</CodeBlock>
+{
+  "error": "map_code is required"
+}
+
+{
+  "error": "API returned status 404"
+}`}</CodeBlock>
           </Coll>
         </EpCard>
       </div>
@@ -1202,9 +1743,6 @@ function S14() {
 }
 
 
-/* ─────────────────────────────────────────────
-   MAIN APP
-───────────────────────────────────────────── */
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
@@ -1216,7 +1754,6 @@ export default function App() {
       <main className="docs-main">
         <div className="docs-content">
 
-          {/* ── HERO ── */}
           <div className="hero animate-fadeup">
             <div className="hero-bg-shape" />
             <div className="hero-bg-shape2" />
@@ -1232,11 +1769,11 @@ export default function App() {
               Friend Actions, Outfits, Craftlands and more. 29 endpoints across 14 groups, all in one place.
             </p>
             <div className="hero-cta">
-              <a className="hero-btn primary" href="https://t.me/SiamBhau?text=I+want+to+buy+a+Premium+API+key" target="_blank" rel="noreferrer">
+              <a className="hero-btn primary" href="https://t.me/SiamBhau?text=https%3A%2F%2Fsiambhau69.eu.cc%0A%0AHi%20%40SiamBhau%20%F0%9F%91%8B,%20I%20want%20to%20BUY%20a%20Premium%20API%20key%20for%20the%20Free%20Fire%20Centralized%20API.%20Please%20share%20your%20available%20plans,%20pricing%20%26%20payment%20methods.%20%F0%9F%92%8E" target="_blank" rel="noreferrer">
                 <Key size={14} />
                 Get Premium Key
               </a>
-              <a className="hero-btn secondary" href="https://t.me/SiamBhau?text=I+want+a+free+API+key" target="_blank" rel="noreferrer">
+              <a className="hero-btn secondary" href="https://t.me/SiamBhau?text=https%3A%2F%2Fsiambhau69.eu.cc%0A%0AHi%20%40SiamBhau%20%F0%9F%91%8B,%20I'd%20like%20to%20get%20a%20FREE%20API%20key%20for%20the%20Free%20Fire%20Info%20endpoints.%20Could%20you%20please%20activate%20one%20for%20me%3F%20%F0%9F%99%8F" target="_blank" rel="noreferrer">
                 <Star size={14} />
                 Free Key (Player Info)
               </a>
@@ -1260,7 +1797,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* ── API GROUPS OVERVIEW ── */}
           <AnimSection>
             <div className="section-label">
               <Layers size={13} />
@@ -1279,7 +1815,6 @@ export default function App() {
             </div>
           </AnimSection>
 
-          {/* ── BASE URL & AUTH ── */}
           <AnimSection>
             <div className="sec-wrap" id="s-base">
               <h2 className="sec-heading" id="s-base-h">
@@ -1301,25 +1836,29 @@ export default function App() {
               </p>
               <CodeBlock>{`http://siambhau69.eu.cc/<group>/<endpoint>?param=VALUE&key=YOUR_KEY`}</CodeBlock>
               <Coll title="Authentication Error Responses (HTTP 403)">
-                <CodeBlock>{`// Error — Key Required
-{ "error": "API key required. Use ?key=YOUR_KEY | Contact: t.me/SiamBhau" }
+                <CodeBlock>{`{
+  "error": "API key required. Use ?key=YOUR_KEY | Contact: t.me/SiamBhau"
+}
 
-// Error — Invalid Key
-{ "error": "Invalid API key. | Contact: t.me/SiamBhau" }
+{
+  "error": "Invalid API key. | Contact: t.me/SiamBhau"
+}
 
-// Error — Inactive Key
-{ "error": "Key is inactive. Contact admin. | Contact: t.me/SiamBhau" }
+{
+  "error": "Key is inactive. Contact admin. | Contact: t.me/SiamBhau"
+}
 
-// Error — Expired Key
-{ "error": "Key expired on 30-06-2025. | Contact: t.me/SiamBhau" }
+{
+  "error": "Key expired on 30-06-2025. | Contact: t.me/SiamBhau"
+}
 
-// Error — No Access to Endpoint
-{ "error": "Key has no access to 'bancheck' endpoint. | Contact: t.me/SiamBhau" }`}</CodeBlock>
+{
+  "error": "Key has no access to 'bancheck' endpoint. | Contact: t.me/SiamBhau"
+}`}</CodeBlock>
               </Coll>
             </div>
           </AnimSection>
 
-          {/* ── ALL GROUPS ── */}
           <AnimSection>
             <div className="sec-wrap" id="s-groups">
               <h2 className="sec-heading">
@@ -1333,6 +1872,7 @@ export default function App() {
   "API": "Free Fire Centralized API System",
   "Version": "5.0",
   "Owner": "SiamBhau",
+  "Telegram": "t.me/SiamBhau",
   "Groups": {
     "Access To JWT"  : "/accesstojwt",
     "Add Item"       : "/additem",
@@ -1354,11 +1894,9 @@ export default function App() {
             </div>
           </AnimSection>
 
-          {/* ── API SECTIONS ── */}
           <S1 /><S2 /><S3 /><S4 /><S5 /><S6 /><S7 />
           <S8 /><S9 /><S10 /><S11 /><S12 /><S13 /><S14 />
 
-          {/* ── REGIONS ── */}
           <AnimSection>
             <div className="sec-wrap" id="s-regions">
               <h2 className="sec-heading">
@@ -1392,7 +1930,6 @@ export default function App() {
             </div>
           </AnimSection>
 
-          {/* ── ERROR REFERENCE ── */}
           <AnimSection>
             <div className="sec-wrap" id="s-errors">
               <h2 className="sec-heading">
@@ -1432,7 +1969,6 @@ export default function App() {
             </div>
           </AnimSection>
 
-          {/* ── CONTACT ── */}
           <AnimSection>
             <div className="sec-wrap" id="s-contact">
               <div className="contact-wrap">
