@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -6,68 +6,82 @@
   --topbar-h: 60px;
   --sidebar-w: 272px;
 
-  --orange: #FF6B00;
-  --orange-light: #FF8533;
-  --orange-dim: rgba(255,107,0,0.1);
-  --orange-dim2: rgba(255,107,0,0.06);
-  --orange-border: rgba(255,107,0,0.2);
+  --bg: #FEFEFE;
+  --ink: #0B0C10;
+  --ink-soft: #4A4C56;
+  --muted: #93959F;
+  --line: #E8E7ED;
+  --line-soft: #F4F3F7;
+  --gold: #C6972F;
+  --gold-deep: #8F6A17;
+  --gold-tint: #FAF4E6;
+  --live: #1F9D55;
+  --live-soft: #E4F5EB;
+  --danger: #D64545;
+  --danger-soft: #FDEDED;
+  --surface: #fff;
 
-  --white: #ffffff;
-  --gray-50: #fafafa;
-  --gray-100: #f4f4f5;
-  --gray-200: #e4e4e7;
-  --gray-300: #d4d4d8;
-  --gray-400: #a1a1aa;
-  --gray-500: #71717a;
-  --gray-600: #52525b;
-  --gray-700: #3f3f46;
-  --gray-800: #27272a;
-  --gray-900: #18181b;
-
-  --text: #111827;
-  --text-muted: #6b7280;
-  --text-dim: #9ca3af;
-  --border: #e5e7eb;
-  --border2: #f3f4f6;
-
-  --green: #16a34a;
-  --green-bg: #f0fdf4;
-  --green-border: #bbf7d0;
-  --blue: #2563eb;
-  --blue-bg: #eff6ff;
-  --blue-border: #bfdbfe;
-  --purple: #7c3aed;
-  --purple-bg: #f5f3ff;
-  --purple-border: #ddd6fe;
-  --red: #dc2626;
-  --red-bg: #fef2f2;
-  --red-border: #fecaca;
-  --yellow: #d97706;
-  --yellow-bg: #fffbeb;
-  --yellow-border: #fde68a;
-
-  --code-bg: #0f172a;
-  --code-text: #e2e8f0;
-  --font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-
-  --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
-  --shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1);
-  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
-  --shadow-orange: 0 4px 20px rgba(255,107,0,0.2);
+  /* Keep the existing docs component vocabulary, mapped to the shared API theme. */
+  --orange: var(--gold);
+  --orange-light: #D2AA57;
+  --orange-dim: rgba(198,151,47,.10);
+  --orange-dim2: rgba(198,151,47,.06);
+  --orange-border: rgba(198,151,47,.25);
+  --white: var(--bg);
+  --gray-50: var(--line-soft);
+  --gray-100: #F0EFF3;
+  --gray-200: #E3E2E8;
+  --gray-300: #C9C7D0;
+  --gray-400: var(--muted);
+  --gray-500: #777985;
+  --gray-600: var(--ink-soft);
+  --gray-700: #343640;
+  --gray-800: #22232A;
+  --gray-900: var(--ink);
+  --text: var(--ink);
+  --text-muted: var(--ink-soft);
+  --text-dim: var(--muted);
+  --border: var(--line);
+  --border2: var(--line-soft);
+  --green: var(--live);
+  --green-bg: var(--live-soft);
+  --green-border: #BEE7CC;
+  --blue: var(--gold-deep);
+  --blue-bg: var(--gold-tint);
+  --blue-border: #EFDFB6;
+  --purple: #6D5A8C;
+  --purple-bg: #F4F0F8;
+  --purple-border: #E3D9EF;
+  --red: var(--danger);
+  --red-bg: var(--danger-soft);
+  --red-border: #F5C6C6;
+  --yellow: var(--gold-deep);
+  --yellow-bg: var(--gold-tint);
+  --yellow-border: #EFDFB6;
+  --code-bg: var(--line-soft);
+  --code-text: #343640;
+  --font: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --display: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --shadow-sm: 0 1px 2px rgba(15,15,20,.03);
+  --shadow: 0 1px 2px rgba(15,15,20,.04), 0 8px 24px -18px rgba(15,15,20,.18);
+  --shadow-md: 0 5px 14px rgba(15,15,20,.08);
+  --shadow-lg: 0 18px 42px -30px rgba(15,15,20,.2);
+  --shadow-orange: 0 4px 12px rgba(198,151,47,.18);
 }
 
 html { scroll-behavior: smooth; }
 body {
-  background: var(--gray-50);
-  color: var(--text);
+  background:
+    radial-gradient(960px 420px at 50% -13%, rgba(198,151,47,.055), transparent 64%),
+    var(--bg);
+  color: var(--ink);
   font-family: var(--font);
   font-size: 14px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
-a { color: var(--orange); text-decoration: none; }
+a { color: var(--gold-deep); text-decoration: none; }
 a:hover { text-decoration: underline; }
 img { max-width: 100%; }
 #root { width: 100%; }
