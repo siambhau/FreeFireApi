@@ -1,4 +1,5 @@
 import './index.css'
+import './App.css'
 import { useState, useEffect, useRef } from 'react'
 import type { ReactNode } from 'react'
 import {
@@ -8,6 +9,8 @@ import {
   Zap, Menu, ExternalLink, Send,
   Lock, Hash, Layers, Star, Server,
 } from 'lucide-react'
+import bannerSample from '../img/banner.png'
+import outfitSample from '../img/outfits.png'
 
 
 function useInView(ref: React.RefObject<HTMLElement | null>) {
@@ -18,7 +21,7 @@ function useInView(ref: React.RefObject<HTMLElement | null>) {
     const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVisible(true) }, { threshold: 0.08 })
     obs.observe(el)
     return () => obs.disconnect()
-  }, [])
+  }, [ref])
   return visible
 }
 
@@ -44,7 +47,7 @@ function CodeBlock({ children }: { children: string }) {
   return (
     <div className="code-wrap">
       <pre className="code-block">{children}</pre>
-      <button className={`copy-btn${copied ? ' copied' : ''}`} onClick={copy} title="Copy">
+      <button className={`copy-btn${copied ? ' copied' : ''}`} onClick={copy} title="Copy" aria-label={copied ? 'Code copied to clipboard' : 'Copy code to clipboard'}>
         {copied ? <Check size={11} /> : <Copy size={11} />}
         {copied ? 'Copied!' : 'Copy'}
       </button>
@@ -153,7 +156,7 @@ const NAV = [
   { id: 's1',  label: 'Access To JWT',   icon: <Key size={15} />,           group: 'api', count: 2 },
   { id: 's2',  label: 'Add Item',        icon: <Shirt size={15} />,         group: 'api', count: 1 },
   { id: 's3',  label: 'Ban Check',       icon: <Ban size={15} />,           group: 'api', count: 1 },
-  { id: 's4',  label: 'Bind Tools',      icon: <Link2 size={15} />,         group: 'api', count: 4 },
+  { id: 's4',  label: 'Bind Tools',      icon: <Link2 size={15} />,         group: 'api', count: 7 },
   { id: 's5',  label: 'Banner',          icon: <ImageIcon size={15} />,     group: 'api', count: 1 },
   { id: 's6',  label: 'EAT To JWT',      icon: <Ticket size={15} />,        group: 'api', count: 1 },
   { id: 's7',  label: 'Free Fire Info',  icon: <User size={15} />,          group: 'api', count: 2, free: true },
@@ -248,7 +251,7 @@ function Topbar({ onMenu }: { onMenu: () => void }) {
           <Zap size={18} strokeWidth={2.5} />
         </div>
         <span className="topbar-name">FF<span>API</span></span>
-        <span className="topbar-ver">v5.0</span>
+        <span className="topbar-ver">v7.0</span>
       </a>
       <div className="topbar-sep" />
       <div className="topbar-right">
@@ -277,7 +280,7 @@ const GROUPS = [
   { id: 's1',  icon: <Key size={15} />,       name: 'Access To JWT',  route: '/accesstojwt',   count: 2 },
   { id: 's2',  icon: <Shirt size={15} />,     name: 'Add Item',       route: '/additem',        count: 1 },
   { id: 's3',  icon: <Ban size={15} />,       name: 'Ban Check',      route: '/bancheck',       count: 1 },
-  { id: 's4',  icon: <Link2 size={15} />,     name: 'Bind Tools',     route: '/bind',           count: 4 },
+  { id: 's4',  icon: <Link2 size={15} />,     name: 'Bind Tools',     route: '/bind',           count: 7 },
   { id: 's5',  icon: <ImageIcon size={15} />, name: 'Banner',         route: '/banner',         count: 1 },
   { id: 's6',  icon: <Ticket size={15} />,    name: 'EAT To JWT',     route: '/eattojwt',       count: 1 },
   { id: 's7',  icon: <User size={15} />,      name: 'Free Fire Info', route: '/freefireinfo',   count: 2, free: true },
@@ -498,8 +501,8 @@ function S4() {
     <AnimSection>
       <div className="sec-wrap" id="s4">
         <SecH id="s4" num={4} icon={<Link2 size={18} />} title="Bind Tools" />
-        <SecBadges group="/bind" count={4} color="#2563eb" />
-        <div className="desc-block">Complete email bind toolkit — view bind info, change bound email (5-step OTP flow), unbind email (3-step), or cancel a pending bind request.</div>
+        <SecBadges group="/bind" count={7} color="#2461c7" />
+        <div className="desc-block">Account binding tools for accounts you own or are authorized to manage. Includes email binding workflows, linked-platform information, and token revocation.</div>
 
         <EpCard method="GET" path="/bind/bind_info" title="View Email Bind Info">
           <CodeBlock>{`GET /bind/bind_info?access_token=YOUR_ACCESS_TOKEN&key=YOUR_KEY`}</CodeBlock>
@@ -708,6 +711,64 @@ Content-Type: application/json
 }`}</CodeBlock>
           </Coll>
         </EpCard>
+
+        <EpCard method="POST" path="/bind/addbind" title="Bind a New Email (3-Step OTP Flow)">
+          <div className="desc-block security-note" style={{ margin: 0 }}>
+            Requires an API key with key type <InlineCode c="bindemail" />. Each POST step requires <InlineCode c="access_token" /> and <InlineCode c="step" />. A GET request to this same path returns instructions only. This changes account security. Use only for an account you own or have explicit permission to manage; complete each step with the OTP and security code issued for that account.
+          </div>
+          <CodeBlock>{`POST /bind/addbind?key=YOUR_KEY
+Content-Type: application/json`}</CodeBlock>
+          <div className="table-wrap">
+            <table className="param-table">
+              <thead><tr><th>Step</th><th>Required Body</th><th>Returns</th></tr></thead>
+              <tbody>
+                <tr><td><span className="p-name">1</span></td><td style={{fontSize:12,fontFamily:'var(--mono)'}}>access_token, email, step:1</td><td style={{fontSize:12,color:'var(--text-muted)'}}>Starts the flow; OTP sent to the new email</td></tr>
+                <tr><td><span className="p-name">2</span></td><td style={{fontSize:12,fontFamily:'var(--mono)'}}>access_token, email, otp, step:2</td><td style={{fontSize:12,color:'var(--text-muted)'}}>Verifies the OTP and returns verifier_token</td></tr>
+                <tr><td><span className="p-name">3</span></td><td style={{fontSize:12,fontFamily:'var(--mono)'}}>access_token, email, verifier_token, security_code, step:3</td><td style={{fontSize:12,color:'var(--text-muted)'}}>Email bind request created</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <Coll title="View Step Examples">
+            <CodeBlock>{`{
+  "access_token": "YOUR_TOKEN",
+  "email": "new@gmail.com",
+  "step": 1
+}
+
+{
+  "access_token": "YOUR_TOKEN",
+  "email": "new@gmail.com",
+  "otp": "123456",
+  "step": 2
+}
+
+{
+  "access_token": "YOUR_TOKEN",
+  "email": "new@gmail.com",
+  "verifier_token": "FROM_STEP_2",
+  "security_code": "123456",
+  "step": 3
+}`}</CodeBlock>
+          </Coll>
+        </EpCard>
+
+        <EpCard method="GET" path="/bind/platform_info" title="View Account Platform Bindings">
+          <div className="desc-block" style={{ margin: 0 }}>Read-only account platform-binding information. Requires a valid private account access token and an API key with key type <InlineCode c="bind" />.</div>
+          <CodeBlock>{`GET /bind/platform_info?access_token=YOUR_ACCESS_TOKEN&key=YOUR_KEY`}</CodeBlock>
+          <ParamTable params={[
+            { name: 'access_token', type: 'string', required: 'yes', description: 'Valid access token for the account being queried' },
+            { name: 'key', type: 'string', required: 'yes', description: 'Your API Key with bind access' },
+          ]} />
+        </EpCard>
+
+        <EpCard method="GET" path="/bind/revoke" title="Revoke Account Access Token">
+          <div className="desc-block security-note" style={{ margin: 0 }}>Requires an API key with key type <InlineCode c="revoke" />. This action revokes/logs out the account access token. The supplied token is invalidated and may no longer be used.</div>
+          <CodeBlock>{`GET /bind/revoke?access_token=YOUR_ACCESS_TOKEN&key=YOUR_KEY`}</CodeBlock>
+          <ParamTable params={[
+            { name: 'access_token', type: 'string', required: 'yes', description: 'Account access token to revoke (will be invalidated)' },
+            { name: 'key', type: 'string', required: 'yes', description: 'Your API Key with revoke access' },
+          ]} />
+        </EpCard>
       </div>
     </AnimSection>
   )
@@ -747,6 +808,10 @@ Cache-Control: public, max-age=300
   "error": "Failed to generate banner"
 }`}</CodeBlock>
           </Coll>
+          <figure className="sample-figure">
+            <figcaption><span>Response preview</span><span className="sample-label">Demo sample</span></figcaption>
+            <img src={bannerSample} alt="Sample Free Fire player profile banner with avatar, player name, team, and level" />
+          </figure>
         </EpCard>
       </div>
     </AnimSection>
@@ -1567,6 +1632,10 @@ Outfit slots: Head, Body, Legs, Shoes, Backpack, Mask, Arm + Character + Weapon 
   "error": "Failed to fetch player info"
 }`}</CodeBlock>
           </Coll>
+          <figure className="sample-figure">
+            <figcaption><span>Image response preview</span><span className="sample-label">Demo sample</span></figcaption>
+            <img src={outfitSample} alt="Sample Free Fire outfit render showing a character and equipped outfit items" />
+          </figure>
         </EpCard>
       </div>
     </AnimSection>
@@ -1766,7 +1835,7 @@ export default function App() {
             </h1>
             <p className="hero-desc">
               The most complete REST API for Free Fire — Player Info, JWT Generator, Ban Check, Guild Tools,
-              Friend Actions, Outfits, Craftlands and more. 29 endpoints across 14 groups, all in one place.
+              Player profiles, account tools, and game data across 32 documented endpoints in 14 groups.
             </p>
             <div className="hero-cta">
               <a className="hero-btn primary" href="https://t.me/SiamBhau?text=https%3A%2F%2Fsiambhau69.eu.cc%0A%0AHi%20%40SiamBhau%20%F0%9F%91%8B,%20I%20want%20to%20BUY%20a%20Premium%20API%20key%20for%20the%20Free%20Fire%20Centralized%20API.%20Please%20share%20your%20available%20plans,%20pricing%20%26%20payment%20methods.%20%F0%9F%92%8E" target="_blank" rel="noreferrer">
@@ -1781,13 +1850,18 @@ export default function App() {
                 <ExternalLink size={14} />
                 Base URL
               </a>
+              <a className="hero-btn try-cta" href="https://siambhau69.eu.cc/TryAllApi" target="_blank" rel="noreferrer" aria-label="Open TryAllApi for free API testing">
+                <Zap size={14} />
+                Try APIs for free
+                <ExternalLink size={12} />
+              </a>
             </div>
             <div className="hero-stats">
               {[
                 { num: '14', label: 'API Groups' },
-                { num: '29', label: 'Endpoints' },
+                { num: '32', label: 'Endpoints' },
                 { num: '16', label: 'Regions' },
-                { num: 'v5', label: 'Version' },
+                { num: '7.0', label: 'Version' },
               ].map(s => (
                 <div key={s.label} className="hero-stat">
                   <div className="hero-stat-num">{s.num}</div>
@@ -1870,7 +1944,7 @@ export default function App() {
               <Coll title="View Full Response (14 Groups)">
                 <CodeBlock>{`{
   "API": "Free Fire Centralized API System",
-  "Version": "5.0",
+  "Version": "7.0",
   "Owner": "SiamBhau",
   "Telegram": "t.me/SiamBhau",
   "Groups": {
@@ -1988,8 +2062,19 @@ export default function App() {
                     siambhau69.eu.cc
                   </a>
                 </div>
+                <div className="resource-links" aria-label="API resources">
+                  <a href="https://siambhau69.eu.cc/TryAllApi" target="_blank" rel="noreferrer">
+                    <span><strong>TryAllApi</strong><small>Free API testing</small></span><ExternalLink size={15} aria-hidden="true" />
+                  </a>
+                  <a href="https://siambhau69.eu.cc/GetFreeApiKey" target="_blank" rel="noreferrer">
+                    <span><strong>GetFreeApiKey</strong><small>Get a free API key</small></span><ExternalLink size={15} aria-hidden="true" />
+                  </a>
+                  <a href="https://siambhau69.eu.cc/ApiKeyDetails" target="_blank" rel="noreferrer">
+                    <span><strong>ApiKeyDetails</strong><small>Review API key details</small></span><ExternalLink size={15} aria-hidden="true" />
+                  </a>
+                </div>
                 <p className="copyright">
-                  &copy; SiamBhau &middot; Free Fire Centralized API &middot; v5.0 &middot; Unauthorized resale is prohibited.
+                  &copy; SiamBhau &middot; Free Fire Centralized API &middot; v7.0 &middot; Unauthorized resale is prohibited.
                 </p>
               </div>
             </div>
