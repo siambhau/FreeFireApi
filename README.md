@@ -4,7 +4,7 @@
 
 <br/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&pause=800&color=FF6B00&center=true&vCenter=true&multiline=true&width=820&height=80&lines=Free+Fire+Centralized+API+System+v6.0;19+Groups+%E2%80%A2+34+Endpoints+%E2%80%A2+Player+Info+is+FREE+%F0%9F%92%8E)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&pause=800&color=FF6B00&center=true&vCenter=true&multiline=true&width=820&height=80&lines=Free+Fire+Centralized+API+System+v7.0;19+Groups+%E2%80%A2+37+Endpoints+%E2%80%A2+Player+Info+is+FREE+%F0%9F%92%8E)](https://git.io/typing-svg)
 
 <br/>
 
@@ -21,11 +21,11 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-6.0-FF6B00?style=for-the-badge&labelColor=0d1117" />
+  <img src="https://img.shields.io/badge/Version-7.0-FF6B00?style=for-the-badge&labelColor=0d1117" />
   <img src="https://img.shields.io/badge/Game-Free%20Fire-FF0000?style=for-the-badge&logo=firefoxbrowser&logoColor=white&labelColor=0d1117" />
   <img src="https://img.shields.io/badge/Built%20With-Python%20Flask-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=0d1117" />
   <img src="https://img.shields.io/badge/Endpoint%20Groups-19-8B5CF6?style=for-the-badge&logo=apachespark&logoColor=white&labelColor=0d1117" />
-  <img src="https://img.shields.io/badge/Total%20Endpoints-34-00C851?style=for-the-badge&labelColor=0d1117" />
+  <img src="https://img.shields.io/badge/Total%20Endpoints-37-00C851?style=for-the-badge&labelColor=0d1117" />
 </p>
 
 <br/>
@@ -40,7 +40,7 @@
 
 <blockquote>
 <img src="https://img.shields.io/badge/⚡-PREMIUM-FF6B00?style=flat-square&labelColor=0d1117" /> &nbsp;
-The most complete <b>Centralized REST API for Free Fire</b> — Player Info, JWT Generator, Ban Check, Guild Tools, Friend Actions, Bind/Unbind, Wallet Info, Login History, Wish List, Outfit Renderer and more. <b>34 endpoints across 19 groups</b>, all in one place.
+The most complete <b>Centralized REST API for Free Fire</b> — Player Info, JWT Generator, Ban Check, Guild Tools, Friend Actions, Bind/Unbind, Wallet Info, Login History, Wish List, Outfit Renderer and more. <b>37 endpoints across 19 groups</b>, all in one place. Want to test the APIs for free? Use <a href="https://siambhau69.eu.cc/TryAllApi">TryAllApi</a>.
 </blockquote>
 
 </div>
@@ -89,7 +89,7 @@ The most complete <b>Centralized REST API for Free Fire</b> — Player Info, JWT
         <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f517/512.gif" width="28" /><br/>
         <b>Bind Tools</b><br/>
         <sub><code>/bind</code></sub><br/>
-        <sub><img src="https://img.shields.io/badge/4-endpoints-2CA5E0?style=flat-square&labelColor=0d1117"/></sub>
+        <sub><img src="https://img.shields.io/badge/7-endpoints-2CA5E0?style=flat-square&labelColor=0d1117"/></sub>
       </a>
     </td>
     <td align="center">
@@ -261,6 +261,23 @@ The most complete <b>Centralized REST API for Free Fire</b> — Player Info, JWT
       </a>
     </td>
   </tr>
+  <tr>
+    <td align="center" width="160">
+      <a href="https://siambhau69.eu.cc/TryAllApi">
+        <sub><b>TryAllApi</b></sub>
+      </a>
+    </td>
+    <td align="center" width="160">
+      <a href="https://siambhau69.eu.cc/GetFreeApiKey">
+        <sub><b>GetFreeApiKey</b></sub>
+      </a>
+    </td>
+    <td align="center" width="160">
+      <a href="https://siambhau69.eu.cc/ApiKeyDetails">
+        <sub><b>ApiKeyDetails</b></sub>
+      </a>
+    </td>
+  </tr>
 </table>
 
 </div>
@@ -333,9 +350,9 @@ GET http://siambhau69.eu.cc/
 ```json
 {
   "API": "Free Fire Centralized API System",
-  "Version": "6.0",
+  "Version": "7.0",
   "Total API": 19,
-  "Total Endpoints": 34,
+  "Total Endpoints": 37,
   "Owner": "SiamBhau",
   "Telegram": "t.me/SiamBhau",
   "Groups": {
@@ -623,9 +640,9 @@ GET /bancheck/bancheck?uid=2579249340&key=YOUR_KEY
 
 ## 4. 🔗 Bind Tools
 
-<img src="https://img.shields.io/badge/Group-/bind-2CA5E0?style=flat-square&labelColor=0d1117" /> &nbsp; <img src="https://img.shields.io/badge/Endpoints-4-8B5CF6?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/Group-/bind-2CA5E0?style=flat-square&labelColor=0d1117" /> &nbsp; <img src="https://img.shields.io/badge/Endpoints-7-8B5CF6?style=flat-square&labelColor=0d1117" />
 
-> Complete email bind toolkit — view bind info, change bound email (5-step OTP flow), unbind email (3-step), or cancel a pending bind request.
+> Complete bind toolkit — view bind info, add or change a bound email, unbind or cancel a bind request, view linked platforms, or revoke an access token.
 
 ### `GET /bind/bind_info` — View Email Bind Info
 
@@ -648,17 +665,17 @@ GET /bind/bind_info?access_token=YOUR_ACCESS_TOKEN&key=YOUR_KEY
   "status": "success",
   "status_code": 200,
   "data": {
-    "current_email": "siamxus69@gmail.com",
+    "current_email": "s**********@g****.com",
     "pending_email": "",
     "countdown_seconds": 0,
     "countdown_human": "0",
     "raw_response": {
-      "email": "siamxus69@gmail.com",
+      "email": "s**********@g****.com",
       "email_to_be": "",
       "request_exec_countdown": 0
     }
   },
-  "summary": "Email confirmed: siamxus69@gmail.com"
+  "summary": "Email confirmed: s**********@g****.com"
 }
 
 
@@ -688,6 +705,49 @@ GET /bind/bind_info?access_token=YOUR_ACCESS_TOKEN&key=YOUR_KEY
 ```
 
 </details>
+
+---
+
+### `POST /bind/addbind` — Bind a New Email (3-Step OTP Flow)
+
+> Use an API key with `bindemail` access. `GET /bind/addbind` returns endpoint instructions; `POST` runs the selected step.
+
+```http
+POST /bind/addbind?key=YOUR_KEY
+Content-Type: application/json
+```
+
+| Step | Required Body | Returns |
+|:----:|---------------|---------|
+| `1` | `access_token`, `email`, `step:1` | OTP sent to the new email |
+| `2` | `access_token`, `email`, `otp`, `step:2` | `verifier_token` |
+| `3` | `access_token`, `email`, `verifier_token`, `security_code`, `step:3` | ✅ Email bind request created |
+
+```json
+// Step 1 example
+{
+  "access_token": "YOUR_TOKEN",
+  "email": "new@gmail.com",
+  "step": 1
+}
+
+// Step 2 example
+{
+  "access_token": "YOUR_TOKEN",
+  "email": "new@gmail.com",
+  "otp": "123456",
+  "step": 2
+}
+
+// Step 3 example
+{
+  "access_token": "YOUR_TOKEN",
+  "email": "new@gmail.com",
+  "verifier_token": "FROM_STEP_2",
+  "security_code": "123456",
+  "step": 3
+}
+```
 
 ---
 
@@ -922,6 +982,58 @@ Content-Type: application/json
 
 ---
 
+### `GET /bind/platform_info` — View Bound Platforms
+
+```http
+GET /bind/platform_info?access_token=YOUR_ACCESS_TOKEN&key=YOUR_KEY
+```
+
+| Parameter | Type | Required | Description |
+|-----------|------|:--------:|-------------|
+| `access_token` | string | ✅ | Garena OAuth Access Token |
+| `key` | string | ✅ | API key with `bind` access |
+
+Returns the platforms currently bound to the account and the platforms available to bind.
+
+```json
+{
+  "success": true,
+  "bounded_accounts": [
+    { "id": 4, "platform": "Guest" }
+  ],
+  "available_platforms": [
+    { "id": 8, "platform": "Google" }
+  ]
+}
+```
+
+---
+
+### `GET /bind/revoke` — Revoke Access Token
+
+```http
+GET /bind/revoke?access_token=YOUR_ACCESS_TOKEN&key=YOUR_KEY
+```
+
+| Parameter | Type | Required | Description |
+|-----------|------|:--------:|-------------|
+| `access_token` | string | ✅ | Garena OAuth Access Token |
+| `key` | string | ✅ | API key with `revoke` access |
+
+```json
+{
+  "success": true,
+  "message": "Access token revoked successfully (account logged out)",
+  "player": {
+    "nickname": "PlayerName",
+    "account_id": "2579249340",
+    "region": "BD"
+  }
+}
+```
+
+---
+
 ## 5. 🖼️ Banner
 
 <img src="https://img.shields.io/badge/Group-/banner-FF6B00?style=flat-square&labelColor=0d1117" /> &nbsp; <img src="https://img.shields.io/badge/Endpoints-1-8B5CF6?style=flat-square&labelColor=0d1117" />
@@ -951,6 +1063,12 @@ Cache-Control: public, max-age=300
 
 [PNG Binary Image — Player Banner with Avatar + Name + Guild + Level]
 ```
+
+**Example image response:**
+
+<p align="center">
+  <img src="img/banner.png" alt="Example image returned by the Banner API" width="100%" />
+</p>
 
 > 🖼️ Returns a direct PNG. Use in browser URL or `<img src="...">`.
 
@@ -2000,6 +2118,12 @@ Content-Type: image/png
 Outfit slots: Head, Body, Legs, Shoes, Backpack, Mask, Arm + Character + Weapon skin
 ```
 
+**Example image response:**
+
+<p align="center">
+  <img src="img/outfits.png" alt="Example image returned by the Outfits API" width="520" />
+</p>
+
 > 🖼️ Returns a direct PNG. Use as `<img src="API_URL">`.
 
 ```json
@@ -2579,7 +2703,17 @@ GET /jwtgenerate/generate?access_token=YOUR_ACCESS_TOKEN&key=YOUR_KEY
 
 <br/>
 
-> 🎁 **Get a Free API Key instantly!** Complete quick tasks (GitHub follow + Telegram join) at **[siambhau69.eu.cc/GetFreeApiKey](https://siambhau69.eu.cc/GetFreeApiKey)** — no need to message anyone!
+> 🎁 **Get a Free API Key instantly!** Complete quick tasks (GitHub follow + Telegram join) — no need to message anyone!
+
+<br/>
+
+<p align="center">
+  <a href="https://siambhau69.eu.cc/TryAllApi">TryAllApi</a>
+  &nbsp;·&nbsp;
+  <a href="https://siambhau69.eu.cc/GetFreeApiKey">GetFreeApiKey</a>
+  &nbsp;·&nbsp;
+  <a href="https://siambhau69.eu.cc/ApiKeyDetails">ApiKeyDetails</a>
+</p>
 
 <br/>
 
