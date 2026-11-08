@@ -2718,6 +2718,9 @@ GET /jwtgenerate/generate?access_token=YOUR_ACCESS_TOKEN&key=YOUR_KEY
 <br/>
 
 <sub>© SiamBhau · Free Fire Centralized API · Premium Access Only · Unauthorized resale is prohibited.</sub>
+<br/>
+
+> ⚠️ **Disclaimer:** FreeFireApi is an independent third-party project. It is **NOT affiliated with, endorsed by, or associated with** Garena, Free Fire, SEA Group, or any related entities. All trademarks and game assets belong to their respective owners.
 
 <br/>
 
